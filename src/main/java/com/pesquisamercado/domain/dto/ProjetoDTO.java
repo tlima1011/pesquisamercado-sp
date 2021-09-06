@@ -1,17 +1,14 @@
-package com.pesquisamercado.domain;
+package com.pesquisamercado.domain.dto;
 
 import java.io.Serializable;
 import java.util.Date;
 
-import org.springframework.data.annotation.Id;
+import com.pesquisamercado.domain.Projeto;
 
-import com.pesquisamercado.domain.dto.EmpresaDTO;
-
-public class Projeto implements Serializable{
-
+public class ProjetoDTO implements Serializable{
+	
 	private static final long serialVersionUID = 1L;
 	
-	@Id
 	private Integer idProjeto; 
 	private String numProjeto; 
 	private String descProjeto; 
@@ -22,20 +19,19 @@ public class Projeto implements Serializable{
 	
 	private EmpresaDTO empresaDTO;
 	
-	public Projeto() { 
+	public ProjetoDTO() { 
 		
 	}
 
-	public Projeto(Integer idProjeto, String numProjeto, String descProjeto, Date dataRecrutamento, Double valorPagar, Double beneficio,
-			Date dataHoraEntrevista, EmpresaDTO empresaDTO) {
-		this.idProjeto = idProjeto;
-		this.numProjeto = numProjeto;
-		this.descProjeto = descProjeto; 
-		this.dataRecrutamento = dataRecrutamento;
-		this.valorPagar = valorPagar;
-		this.beneficio = beneficio;
-		this.dataHoraEntrevista = dataHoraEntrevista;
-		this.empresaDTO = empresaDTO;
+	public ProjetoDTO(Projeto obj) { 
+		this.idProjeto = obj.getIdProjeto(); 
+		this.numProjeto = obj.getNumProjeto();
+		this.descProjeto = obj.getDescProjeto(); 
+		this.dataRecrutamento = obj.getDataRecrutamento(); 
+		this.valorPagar = obj.getValorPagar(); 
+		this.beneficio = obj.getBeneficio(); 
+		this.dataHoraEntrevista = obj.getDataHoraEntrevista();
+		this.empresaDTO = obj.getEmpresaDTO(); 
 	}
 
 	public Integer getIdProjeto() {
@@ -101,6 +97,7 @@ public class Projeto implements Serializable{
 	public void setEmpresaDTO(EmpresaDTO empresaDTO) {
 		this.empresaDTO = empresaDTO;
 	}
+	
 	
 	
 }

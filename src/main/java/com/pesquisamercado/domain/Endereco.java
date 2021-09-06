@@ -1,12 +1,16 @@
 package com.pesquisamercado.domain;
 
+import java.io.Serializable;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.pesquisamercado.domain.dto.EmpresaDTO;
 
 @Document(collection="endereco")
-public class Endereco {
+public class Endereco implements Serializable{
+
+	private static final long serialVersionUID = 1L;
 	
 	@Id
 	private Integer id; 
