@@ -27,6 +27,7 @@ public class Pesquisador implements Serializable{
 	
 	private ArrayList<Telefone> telefones = new ArrayList<>(); 
 	
+	private ArrayList<Endereco> enderecos = new ArrayList<>();
 	
 	public Pesquisador() {
 		
@@ -128,6 +129,10 @@ public class Pesquisador implements Serializable{
 
 	public ArrayList<Telefone> getTelefones() {
 		return telefones;
+	}
+
+	public ArrayList<Endereco> getEnderecos() {
+		return enderecos;
 	}
 	
 	
