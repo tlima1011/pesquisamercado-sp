@@ -1,19 +1,13 @@
-package com.pesquisamercado.domain;
+package com.pesquisamercado.domain.dto;
 
-import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Date;
 
-import org.springframework.data.mongodb.core.mapping.Document;
-
+import com.pesquisamercado.domain.Pesquisador;
 import com.pesquisamercado.enums.EstadoCivil;
 import com.pesquisamercado.enums.Status;
 
-@Document(collection="pesquisador")
-public class Pesquisador implements Serializable{
-
-	private static final long serialVersionUID = 1L;
-		
+public class PesquisadorDTO {
+	
 	private Integer idPesquisador; 
 	private String nomePesquisador; 
 	private Date dataNascimento; 
@@ -25,25 +19,21 @@ public class Pesquisador implements Serializable{
 	private String senha; 
 	private Status status; 
 	
-	private ArrayList<Telefone> telefones = new ArrayList<>(); 
-	
-	
-	public Pesquisador() {
+	public PesquisadorDTO() {
 		
 	}
-
-	public Pesquisador(Integer idPesquisador, String nomePesquisador, Date dataNascimento, int idade,
-			EstadoCivil estadoCivil, String cpf, String rg, String email, String senha, Status status) {
-		this.idPesquisador = idPesquisador;
-		this.nomePesquisador = nomePesquisador;
-		this.dataNascimento = dataNascimento;
-		this.idade = idade;
-		this.estadoCivil = estadoCivil;
-		this.cpf = cpf;
-		this.rg = rg;
-		this.email = email;
-		this.senha = senha;
-		this.status = status;
+	
+	public PesquisadorDTO(Pesquisador obj) {
+		this.idPesquisador = obj.getIdPesquisador(); 
+		this.nomePesquisador = obj.getNomePesquisador(); 
+		this.dataNascimento = obj.getDataNascimento(); 
+		this.idade = obj.getIdade(); 
+		this.estadoCivil = obj.getEstadoCivil(); 
+		this.cpf = obj.getCpf(); 
+		this.rg = obj.getRg(); 
+		this.email = obj.getEmail(); 
+		this.senha = obj.getSenha(); 
+		this.status = obj.getStatus(); 
 	}
 
 	public Integer getIdPesquisador() {
@@ -125,10 +115,7 @@ public class Pesquisador implements Serializable{
 	public void setStatus(Status status) {
 		this.status = status;
 	}
-
-	public ArrayList<Telefone> getTelefones() {
-		return telefones;
-	}
+	
 	
 	
 	

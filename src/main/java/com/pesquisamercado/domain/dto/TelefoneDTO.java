@@ -2,6 +2,7 @@ package com.pesquisamercado.domain.dto;
 
 import java.io.Serializable;
 
+import com.pesquisamercado.domain.Pesquisador;
 import com.pesquisamercado.domain.Telefone;
 
 public class TelefoneDTO implements Serializable{
@@ -13,14 +14,22 @@ public class TelefoneDTO implements Serializable{
 	
 	private EmpresaDTO empresaDTO; 
 	
+	private PesquisadorDTO pesquisadorDTO; 
+		
 	public TelefoneDTO() {
 		
 	}
-
+	
+//	public TelefoneDTO(Pesquisador obj) {
+//		this.id = obj.getId(); 
+//		this.numero = obj.getNu
+//	}
+	
 	public TelefoneDTO(Telefone obj) {
 		this.id = obj.getId();
 		this.numero = obj.getNumero();  
 		this.empresaDTO = obj.getEmpresaDTO();
+		this.pesquisadorDTO = obj.getPesquisadorDTO(); 
 	}
 
 	public Integer getId() {
@@ -46,6 +55,15 @@ public class TelefoneDTO implements Serializable{
 	public void setEmpresaDTO(EmpresaDTO empresaDTO) {
 		this.empresaDTO = empresaDTO;
 	}
+
+	public PesquisadorDTO getPesquisadorDTO() {
+		return pesquisadorDTO;
+	}
+
+	public void setPesquisadorDTO(PesquisadorDTO pesquisadorDTO) {
+		this.pesquisadorDTO = pesquisadorDTO;
+	}
+	
 	
 	
 }
