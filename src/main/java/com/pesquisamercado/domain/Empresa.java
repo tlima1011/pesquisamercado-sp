@@ -4,9 +4,11 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.pesquisamercado.enums.Status;
 
+@Document(collection="empresa")
 public class Empresa implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
