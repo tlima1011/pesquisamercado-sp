@@ -1,6 +1,7 @@
 package com.pesquisamercado.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 
 import org.springframework.data.annotation.Id;
@@ -26,6 +27,8 @@ public class Projeto implements Serializable{
 	private EmpresaDTO empresaDTO;
 	
 	private PesquisadorDTO pesquisadorDTO; 
+	
+	private ArrayList<Convidado> convidados = new ArrayList<>(); 
 	
 	public Projeto() { 
 		
@@ -114,6 +117,10 @@ public class Projeto implements Serializable{
 
 	public void setPesquisadorDTO(PesquisadorDTO pesquisadorDTO) {
 		this.pesquisadorDTO = pesquisadorDTO;
+	}
+
+	public ArrayList<Convidado> getConvidados() {
+		return convidados;
 	}
 	
 	

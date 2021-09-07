@@ -33,6 +33,8 @@ public class Pesquisador implements Serializable{
 	
 	private ArrayList<Empresa> empresas = new ArrayList<>();
 	
+	private ArrayList<Convidado> convidados = new ArrayList<>(); 
+	
 	public Pesquisador() {
 		
 	}
@@ -145,6 +147,10 @@ public class Pesquisador implements Serializable{
 
 	public ArrayList<Empresa> getEmpresas() {
 		return empresas;
+	}
+
+	public ArrayList<Convidado> getConvidados() {
+		return convidados;
 	}
 	
 
