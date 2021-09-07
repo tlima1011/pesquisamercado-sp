@@ -26,6 +26,8 @@ public class Empresa implements Serializable{
 	//@DBRef(lazy = true)
 	private ArrayList<Endereco> enderecos = new ArrayList<>();
 	
+	private ArrayList<Projeto> projetos = new ArrayList<>(); 
+	
 	public Empresa() { 
 		
 	}
@@ -85,16 +87,10 @@ public class Empresa implements Serializable{
 	public ArrayList<Endereco> getEnderecos() {
 		return enderecos;
 	}
-	
-	public void addTelefone(Telefone tels) { 
-		telefones.add(tels); 
+
+	public ArrayList<Projeto> getProjetos() {
+		return projetos;
 	}
-	
-	public void addEndereco(Endereco ends) {
-		enderecos.add(ends); 
-	}
-	
-	
 	
 	
 }

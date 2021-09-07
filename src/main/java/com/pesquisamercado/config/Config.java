@@ -70,6 +70,7 @@ public class Config implements CommandLineRunner{
 				
 		empr1.getTelefones().addAll(Arrays.asList(telefone1,telefone2));
 		empr1.getEnderecos().addAll(Arrays.asList(endEmpresa1)); 	
+		empr1.getProjetos().addAll(Arrays.asList(proj1));
 		
 		projetoRepository.saveAll(Arrays.asList(proj1));
 		
