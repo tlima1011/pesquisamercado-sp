@@ -20,11 +20,9 @@ import com.pesquisamercado.domain.dto.ProjetoDTO;
 import com.pesquisamercado.services.EnderecoService;
 import com.pesquisamercado.services.ProjetoService;
 
+@RestController
+@RequestMapping(value="/projetos")
 public class ProjetoResource {
-	
-	@RestController
-	@RequestMapping(value="/projetos")
-	public class EnderecoResource {
 		
 		@Autowired
 		private ProjetoService service; 
@@ -57,7 +55,7 @@ public class ProjetoResource {
 			obj.setIdProjeto(idProjeto);
 			obj = service.update(obj);
 			return ResponseEntity.noContent().build();
-		}
-	
 	}
+	
 }
+
