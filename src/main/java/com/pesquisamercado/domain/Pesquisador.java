@@ -29,6 +29,8 @@ public class Pesquisador implements Serializable{
 	
 	private ArrayList<Endereco> enderecos = new ArrayList<>();
 	
+	private ArrayList<Projeto> projetos = new ArrayList<>();
+	
 	public Pesquisador() {
 		
 	}
@@ -134,8 +136,10 @@ public class Pesquisador implements Serializable{
 	public ArrayList<Endereco> getEnderecos() {
 		return enderecos;
 	}
-	
-	
+
+	public ArrayList<Projeto> getProjetos() {
+		return projetos;
+	}
 	
 
 }

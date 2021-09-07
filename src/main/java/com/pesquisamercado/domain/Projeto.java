@@ -5,7 +5,9 @@ import java.util.Date;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
 import com.pesquisamercado.domain.dto.EmpresaDTO;
+import com.pesquisamercado.domain.dto.PesquisadorDTO;
 
 @Document(collection="projeto")
 public class Projeto implements Serializable{
@@ -23,12 +25,14 @@ public class Projeto implements Serializable{
 	
 	private EmpresaDTO empresaDTO;
 	
+	private PesquisadorDTO pesquisadorDTO; 
+	
 	public Projeto() { 
 		
 	}
 
 	public Projeto(Integer idProjeto, String numProjeto, String descProjeto, Date dataRecrutamento, Double valorPagar, Double beneficio,
-			Date dataHoraEntrevista, EmpresaDTO empresaDTO) {
+			Date dataHoraEntrevista, EmpresaDTO empresaDTO, PesquisadorDTO pesquisadorDTO) {
 		this.idProjeto = idProjeto;
 		this.numProjeto = numProjeto;
 		this.descProjeto = descProjeto; 
@@ -37,6 +41,7 @@ public class Projeto implements Serializable{
 		this.beneficio = beneficio;
 		this.dataHoraEntrevista = dataHoraEntrevista;
 		this.empresaDTO = empresaDTO;
+		this.pesquisadorDTO = pesquisadorDTO; 
 	}
 
 	public Integer getIdProjeto() {
@@ -102,6 +107,16 @@ public class Projeto implements Serializable{
 	public void setEmpresaDTO(EmpresaDTO empresaDTO) {
 		this.empresaDTO = empresaDTO;
 	}
+
+	public PesquisadorDTO getPesquisadorDTO() {
+		return pesquisadorDTO;
+	}
+
+	public void setPesquisadorDTO(PesquisadorDTO pesquisadorDTO) {
+		this.pesquisadorDTO = pesquisadorDTO;
+	}
+	
+	
 	
 	
 }

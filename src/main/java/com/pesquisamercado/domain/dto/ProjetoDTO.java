@@ -19,6 +19,8 @@ public class ProjetoDTO implements Serializable{
 	
 	private EmpresaDTO empresaDTO;
 	
+	private PesquisadorDTO pesquisadorDTO; 
+	
 	public ProjetoDTO() { 
 		
 	}
@@ -31,7 +33,8 @@ public class ProjetoDTO implements Serializable{
 		this.valorPagar = obj.getValorPagar(); 
 		this.beneficio = obj.getBeneficio(); 
 		this.dataHoraEntrevista = obj.getDataHoraEntrevista();
-		this.empresaDTO = obj.getEmpresaDTO(); 
+		this.empresaDTO = obj.getEmpresaDTO();
+		this.pesquisadorDTO = obj.getPesquisadorDTO(); 
 	}
 
 	public Integer getIdProjeto() {
@@ -96,6 +99,14 @@ public class ProjetoDTO implements Serializable{
 
 	public void setEmpresaDTO(EmpresaDTO empresaDTO) {
 		this.empresaDTO = empresaDTO;
+	}
+
+	public PesquisadorDTO getPesquisadorDTO() {
+		return pesquisadorDTO;
+	}
+
+	public void setPesquisadorDTO(PesquisadorDTO pesquisadorDTO) {
+		this.pesquisadorDTO = pesquisadorDTO;
 	}
 	
 	

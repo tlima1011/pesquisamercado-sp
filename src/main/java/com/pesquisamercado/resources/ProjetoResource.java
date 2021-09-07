@@ -39,17 +39,17 @@ public class ProjetoResource {
 		public ResponseEntity<Void> insert(@RequestBody ProjetoDTO objDto){
 			Projeto obj = service.fromDTO(objDto); 
 			obj = service.insert(obj);
-			URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getIdProjeto()).toUri(); 
+			URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{idProjeto}").buildAndExpand(obj.getIdProjeto()).toUri(); 
 			return ResponseEntity.created(uri).build();
 		}
 		
-		@RequestMapping(value = "/{id}", method=RequestMethod.DELETE)
+		@RequestMapping(value = "/{idProjeto}", method=RequestMethod.DELETE)
 		public ResponseEntity<Void> delete(@PathVariable Integer idProjeto){
 			service.delete(idProjeto); 
 			return ResponseEntity.noContent().build();
 		}
 		
-		@RequestMapping(value = "/{id}", method=RequestMethod.PUT)
+		@RequestMapping(value = "/{idProjeto}", method=RequestMethod.PUT)
 		public ResponseEntity<Void> update(@RequestBody ProjetoDTO objDto, @PathVariable Integer idProjeto){
 			Projeto obj = service.fromDTO(objDto); 
 			obj.setIdProjeto(idProjeto);

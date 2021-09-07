@@ -49,6 +49,7 @@ public class ProjetoService {
 		newObj.setBeneficio(obj.getBeneficio());
 		newObj.setDataHoraEntrevista(obj.getDataHoraEntrevista());
 		newObj.setEmpresaDTO(obj.getEmpresaDTO());
+		newObj.setPesquisadorDTO(obj.getPesquisadorDTO());
 	}
 	
 	public Projeto fromDTO(ProjetoDTO objdto) {
@@ -60,13 +61,8 @@ public class ProjetoService {
 				objdto.getValorPagar(), 
 				objdto.getBeneficio(), 
 				objdto.getDataHoraEntrevista(),
-				objdto.getEmpresaDTO()
+				objdto.getEmpresaDTO(), 
+				objdto.getPesquisadorDTO()
 				); 
 	}
-	
-	/*this.logradouro = logradouro;
-	this.numero = numero;
-	this.bairro = bairro;
-	this.cep = cep;*/
-
 }
