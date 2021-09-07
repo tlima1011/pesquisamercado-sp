@@ -87,6 +87,7 @@ public class Config implements CommandLineRunner{
 		p1.getTelefones().addAll(Arrays.asList(telPesq1, telPesq2));	
 		p1.getEnderecos().addAll(Arrays.asList(e1)); 
 		p1.getProjetos().addAll(Arrays.asList(proj1));
+		p1.getEmpresas().addAll(Arrays.asList(empr1)); 
 		
 		telefoneRepository.saveAll(Arrays.asList(telefone1, telefone2, telPesq1, telPesq2));
 		

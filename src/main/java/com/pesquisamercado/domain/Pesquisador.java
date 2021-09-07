@@ -31,6 +31,8 @@ public class Pesquisador implements Serializable{
 	
 	private ArrayList<Projeto> projetos = new ArrayList<>();
 	
+	private ArrayList<Empresa> empresas = new ArrayList<>();
+	
 	public Pesquisador() {
 		
 	}
@@ -139,6 +141,10 @@ public class Pesquisador implements Serializable{
 
 	public ArrayList<Projeto> getProjetos() {
 		return projetos;
+	}
+
+	public ArrayList<Empresa> getEmpresas() {
+		return empresas;
 	}
 	
 
