@@ -12,6 +12,8 @@ public class TelefoneDTO implements Serializable{
 	private Integer id; 
 	private String numero; 
 	
+	private ConvidadoDTO convidadoDTO; 
+	
 	private EmpresaDTO empresaDTO; 
 	
 	private PesquisadorDTO pesquisadorDTO; 
@@ -30,6 +32,7 @@ public class TelefoneDTO implements Serializable{
 		this.numero = obj.getNumero();  
 		this.empresaDTO = obj.getEmpresaDTO();
 		this.pesquisadorDTO = obj.getPesquisadorDTO(); 
+		this.convidadoDTO = obj.getConvidadoDTO(); 
 	}
 
 	public Integer getId() {
@@ -62,6 +65,14 @@ public class TelefoneDTO implements Serializable{
 
 	public void setPesquisadorDTO(PesquisadorDTO pesquisadorDTO) {
 		this.pesquisadorDTO = pesquisadorDTO;
+	}
+
+	public ConvidadoDTO getConvidadoDTO() {
+		return convidadoDTO;
+	}
+
+	public void setConvidadoDTO(ConvidadoDTO convidadoDTO) {
+		this.convidadoDTO = convidadoDTO;
 	}
 	
 	

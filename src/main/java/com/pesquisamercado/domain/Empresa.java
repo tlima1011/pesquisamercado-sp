@@ -28,6 +28,8 @@ public class Empresa implements Serializable{
 	
 	private ArrayList<Projeto> projetos = new ArrayList<>(); 
 	
+	private ArrayList<Convidado> convidados = new ArrayList<>();
+	
 	public Empresa() { 
 		
 	}
@@ -90,6 +92,10 @@ public class Empresa implements Serializable{
 
 	public ArrayList<Projeto> getProjetos() {
 		return projetos;
+	}
+
+	public ArrayList<Convidado> getConvidados() {
+		return convidados;
 	}
 	
 	

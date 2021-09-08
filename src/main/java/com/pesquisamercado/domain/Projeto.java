@@ -122,6 +122,8 @@ public class Projeto implements Serializable{
 	public ArrayList<Convidado> getConvidados() {
 		return convidados;
 	}
+
+	
 	
 	
 	

@@ -5,6 +5,7 @@ import java.io.Serializable;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.pesquisamercado.domain.dto.ConvidadoDTO;
 import com.pesquisamercado.domain.dto.EmpresaDTO;
 import com.pesquisamercado.domain.dto.PesquisadorDTO;
 
@@ -21,9 +22,18 @@ public class Telefone implements Serializable{
 		
 	}
 	
+	private ConvidadoDTO convidadoDTO; 
+	
 	private PesquisadorDTO pesquisadorDTO; 	
 	
 	private EmpresaDTO empresaDTO;
+	
+	public Telefone(Integer id, String numero, ConvidadoDTO convidadoDTO) {
+		this.id = id;  
+		this.numero = numero;
+		this.convidadoDTO = convidadoDTO;  
+	}
+	
 	
 	public Telefone(Integer id, String numero, PesquisadorDTO pesquisadorDTO) {
 		this.id = id;  
@@ -68,7 +78,12 @@ public class Telefone implements Serializable{
 	public void setPesquisadorDTO(PesquisadorDTO pesquisadorDTO) {
 		this.pesquisadorDTO = pesquisadorDTO;
 	}
-	
-	
-	
+
+	public ConvidadoDTO getConvidadoDTO() {
+		return convidadoDTO;
+	}
+
+	public void setConvidadoDTO(ConvidadoDTO convidadoDTO) {
+		this.convidadoDTO = convidadoDTO;
+	}
 }

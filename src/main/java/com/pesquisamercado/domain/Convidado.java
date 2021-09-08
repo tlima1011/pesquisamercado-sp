@@ -732,6 +732,8 @@ public class Convidado implements Serializable{
 	public ArrayList<Carro> getCarros() {
 		return carros;
 	}
+	
+	
 
 	
 		

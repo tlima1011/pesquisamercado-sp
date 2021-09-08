@@ -46,12 +46,15 @@ public class IdadeFilhosService {
 	private void updateData(IdadeFilhos newObj, IdadeFilhos obj) {
 		newObj.setId(obj.getId()); 
 		newObj.setIdade(obj.getIdade()); 
+		newObj.setConvidadoDTO(obj.getConvidadoDTO()); 
+
 	}
 	
 	public IdadeFilhos fromDTO(IdadeFilhosDTO objdto) {
 		return new IdadeFilhos(
 				objdto.getId(),
-				objdto.getIdade()
+				objdto.getIdade(),
+				objdto.getConvidadoDTO()
 				); 
 	}
 	

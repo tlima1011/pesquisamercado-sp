@@ -7,6 +7,8 @@ public class IdadeFilhosDTO {
 	private Integer id; 
 	private String idade; 
 	
+	private ConvidadoDTO convidadoDTO; 
+	
 	public IdadeFilhosDTO() {
 		
 	}
@@ -14,6 +16,7 @@ public class IdadeFilhosDTO {
 	public IdadeFilhosDTO(IdadeFilhos obj) {
 		this.id = obj.getId(); 
 		this.idade = obj.getIdade(); 
+		this.convidadoDTO = obj.getConvidadoDTO();
 	}
 
 	public Integer getId() {
@@ -30,6 +33,10 @@ public class IdadeFilhosDTO {
 
 	public void setIdade(String idade) {
 		this.idade = idade;
+	}
+
+	public ConvidadoDTO getConvidadoDTO() {
+		return convidadoDTO;
 	}
 	
 }

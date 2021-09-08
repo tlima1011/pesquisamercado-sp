@@ -5,6 +5,7 @@ import java.io.Serializable;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.pesquisamercado.domain.dto.ConvidadoDTO;
 import com.pesquisamercado.domain.dto.EmpresaDTO;
 import com.pesquisamercado.domain.dto.PesquisadorDTO;
 
@@ -24,9 +25,21 @@ public class Endereco implements Serializable{
 	
 	private PesquisadorDTO pesquisadorDTO; 
 		
+	private ConvidadoDTO convidadoDTO; 
+	
 	public Endereco() { 
 		
 	}
+	
+	public Endereco(Integer id, String logradouro,  String bairro, String numero, String cep, ConvidadoDTO convidadoDTO) {
+		this.id = id;
+		this.logradouro = logradouro;
+		this.bairro = bairro;
+		this.numero = numero;
+		this.cep = cep;
+		this.convidadoDTO = convidadoDTO; 
+	} 
+	
 	
 	public Endereco(Integer id, String logradouro,  String bairro, String numero, String cep, PesquisadorDTO pesquisadorDTO) {
 		this.id = id;
@@ -101,6 +114,15 @@ public class Endereco implements Serializable{
 	public void setPesquisadorDTO(PesquisadorDTO pesquisadorDTO) {
 		this.pesquisadorDTO = pesquisadorDTO;
 	}
+
+	public ConvidadoDTO getConvidadoDTO() {
+		return convidadoDTO;
+	}
+
+	public void setConvidadoDTO(ConvidadoDTO convidadoDTO) {
+		this.convidadoDTO = convidadoDTO;
+	}
+	
 	
 	
 	

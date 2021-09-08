@@ -7,7 +7,9 @@ public class CarroDTO {
 	private Integer id; 
 	private String modelo; 
 	private String marca; 
-	private Integer ano; 
+	private Integer ano;
+	
+	private ConvidadoDTO convidadoDTO; 
 	
 	public CarroDTO() {
 		
@@ -17,7 +19,8 @@ public class CarroDTO {
 		this.id = obj.getId(); 
 		this.modelo = obj.getModelo(); 
 		this.marca = obj.getMarca(); 
-		this.ano = obj.getAno(); 
+		this.ano = obj.getAno();
+		this.convidadoDTO = obj.getConvidadoDTO(); 
 	}
 
 	public Integer getId() {
@@ -51,5 +54,11 @@ public class CarroDTO {
 	public void setAno(Integer ano) {
 		this.ano = ano;
 	}
+
+	public ConvidadoDTO getConvidadoDTO() {
+		return convidadoDTO;
+	}
+
+	
 
 }

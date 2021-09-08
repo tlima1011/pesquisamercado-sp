@@ -46,19 +46,16 @@ public class CarroService {
 		newObj.setModelo(obj.getModelo()); 
 		newObj.setMarca(obj.getMarca()); 
 		newObj.setAno(obj.getAno());
+		newObj.setConvidadoDTO(obj.getConvidadoDTO());
 	}
 	
 	public Carro fromDTO(CarroDTO objdto) {
 		return new Carro(
 				objdto.getId(),
 				objdto.getModelo(),
-				objdto.getMarca()
-				); 
+				objdto.getMarca(),
+				objdto.getAno(),
+				objdto.getConvidadoDTO()
+		); 
 	}
-	
-	/*this.logradouro = logradouro;
-	this.numero = numero;
-	this.bairro = bairro;
-	this.cep = cep;*/
-
 }

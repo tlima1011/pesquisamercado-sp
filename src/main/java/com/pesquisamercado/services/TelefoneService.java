@@ -49,7 +49,8 @@ public class TelefoneService {
 		return new Telefone(
 				objdto.getId(),
 				objdto.getNumero(), 
-				objdto.getEmpresaDTO()); 
+				objdto.getEmpresaDTO()
+				); 
 	}
 
 }
