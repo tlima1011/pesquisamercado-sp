@@ -16,6 +16,10 @@ public class EnderecoDTO implements Serializable{
 		
 	private EmpresaDTO empresaDTO; 
 	
+	private PesquisadorDTO pesquisadorDTO;
+	
+	private ConvidadoDTO convidadoDTO; 
+	
 	public EnderecoDTO() { 
 		
 	}
@@ -27,6 +31,8 @@ public class EnderecoDTO implements Serializable{
 		this.bairro = obj.getBairro();
 		this.cep = obj.getCep();
 		this.empresaDTO = obj.getEmpresaDTO(); 
+		this.pesquisadorDTO = obj.getPesquisadorDTO(); 
+		this.convidadoDTO = obj.getConvidadoDTO(); 
 	}
 
 	public Integer getId() {
@@ -75,6 +81,22 @@ public class EnderecoDTO implements Serializable{
 
 	public void setEmpresaDTO(EmpresaDTO empresaDTO) {
 		this.empresaDTO = empresaDTO;
+	}
+
+	public PesquisadorDTO getPesquisadorDTO() {
+		return pesquisadorDTO;
+	}
+
+	public void setPesquisadorDTO(PesquisadorDTO pesquisadorDTO) {
+		this.pesquisadorDTO = pesquisadorDTO;
+	}
+
+	public ConvidadoDTO getConvidadoDTO() {
+		return convidadoDTO;
+	}
+
+	public void setConvidadoDTO(ConvidadoDTO convidadoDTO) {
+		this.convidadoDTO = convidadoDTO;
 	}
 	
 	

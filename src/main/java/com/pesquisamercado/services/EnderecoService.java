@@ -50,6 +50,8 @@ public class EnderecoService {
 		newObj.setBairro(obj.getBairro());
 		newObj.setCep(obj.getCep());	
 		newObj.setEmpresaDTO(obj.getEmpresaDTO());
+		newObj.setConvidadoDTO(obj.getConvidadoDTO());
+		newObj.setPesquisadorDTO(obj.getPesquisadorDTO());
 	}
 	
 	public Endereco fromDTO(EnderecoDTO objdto) {
@@ -59,7 +61,9 @@ public class EnderecoService {
 				objdto.getNumero(),
 				objdto.getBairro(),
 				objdto.getCep(), 
-				objdto.getEmpresaDTO()
+				objdto.getEmpresaDTO(), 
+				objdto.getConvidadoDTO(), 
+				objdto.getPesquisadorDTO()
 				); 
 	}
 	

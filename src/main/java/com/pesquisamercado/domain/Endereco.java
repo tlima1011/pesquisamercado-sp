@@ -27,7 +27,7 @@ public class Endereco implements Serializable{
 		
 	private ConvidadoDTO convidadoDTO; 
 	
-	public Endereco() { 
+	public Endereco(Integer integer, String string, String string2, String string3, String string4, EmpresaDTO empresaDTO2, ConvidadoDTO convidadoDTO2, PesquisadorDTO pesquisadorDTO2) { 
 		
 	}
 	

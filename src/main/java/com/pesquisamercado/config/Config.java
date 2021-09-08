@@ -94,7 +94,7 @@ public class Config implements CommandLineRunner{
 		Telefone telPesq1 = new Telefone(3,"11122233", new PesquisadorDTO(p1)); 
 		Telefone telPesq2 = new Telefone(4,"962423333", new PesquisadorDTO(p1)); 
 		
-		Endereco e1 = new Endereco(3, "Rua guaicurus","7788","Lapense","33333", new PesquisadorDTO(p1)); 
+		Endereco e1 = new Endereco(2, "Rua guaicurus","7788","Lapense","33333", new PesquisadorDTO(p1)); 
 				
 		empr1.getTelefones().addAll(Arrays.asList(telefone1,telefone2));
 		empr1.getEnderecos().addAll(Arrays.asList(endEmpresa1)); 	
@@ -119,7 +119,7 @@ public class Config implements CommandLineRunner{
 		Telefone t2 = new Telefone(6,"962423333", new ConvidadoDTO(c1));
 		
 		//Integer id, String logradouro,  String bairro, String numero, String cep, ConvidadoDTO convidadoDTO
-		Endereco endConv1 = new Endereco(1,"Rua Joao Cabreuva","Cidade Tiradentes", "88", "22222", new ConvidadoDTO(c1));
+		Endereco endConv1 = new Endereco(3,"Rua Joao Cabreuva","Cidade Tiradentes", "88", "22222", new ConvidadoDTO(c1));
 		
 		proj1.getConvidados().addAll(Arrays.asList(c1));
 		
@@ -134,8 +134,8 @@ public class Config implements CommandLineRunner{
 		
 		telefoneRepository.saveAll(Arrays.asList(telefone1, telefone2, telPesq1, telPesq2, t1, t2));
 		
-		enderecoRepository.saveAll(Arrays.asList(endEmpresa1, e1, endConv1)); 
-				
+		enderecoRepository.saveAll(Arrays.asList(e1, endEmpresa1, endConv1));  
+		
 		projetoRepository.saveAll(Arrays.asList(proj1));
 		
 		empresaRepository.saveAll(Arrays.asList(empr1)); 
