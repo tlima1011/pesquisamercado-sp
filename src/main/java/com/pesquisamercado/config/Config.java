@@ -19,6 +19,7 @@ import com.pesquisamercado.domain.dto.EmpresaDTO;
 import com.pesquisamercado.domain.dto.PesquisadorDTO;
 import com.pesquisamercado.enums.EstadoCivil;
 import com.pesquisamercado.enums.Status;
+import com.pesquisamercado.repositories.ConvidadoRepository;
 import com.pesquisamercado.repositories.EmpresaRepository;
 import com.pesquisamercado.repositories.EnderecoRepository;
 import com.pesquisamercado.repositories.PesquisadorRepository;
@@ -43,6 +44,9 @@ public class Config implements CommandLineRunner{
 	@Autowired
 	private PesquisadorRepository pesquisadorRepository; 
 	
+	@Autowired
+	private ConvidadoRepository convidadoRepository; 
+	
 	@Override
 	public void run(String... args) throws Exception {
 		
@@ -61,6 +65,8 @@ public class Config implements CommandLineRunner{
 		projetoRepository.deleteAll(); 
 		
 		pesquisadorRepository.deleteAll(); 
+		
+		convidadoRepository.deleteAll(); 
 				
 		Empresa empr1 = new Empresa(1,"Kyra","Jonana","kyra@kyra.com", Status.ATIVO);
 				
