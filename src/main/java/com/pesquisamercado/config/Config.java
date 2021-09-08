@@ -110,7 +110,14 @@ public class Config implements CommandLineRunner{
 				"Brasileiro", "15 anos", Idade.calcularIdade(formataData.parse("01/04/2001")),EstadoCivil.CASADO,
 				'S','S',"Auxiliar Administrativo", 'S',"Medicina","Uninove", 1, 1,
 				1, 1, 2, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1,
-				'S', 'S', Instrucao.MEDIO_COMPLETO_SUPERIOR_INCOMPLETO, "Oficial Administrativo","Itau", Status.ATIVO, new PesquisadorDTO(p1), new ProjetoDTO(proj1), new EmpresaDTO(empr1)); 
+				'S', 'S', Instrucao.MEDIO_COMPLETO_SUPERIOR_INCOMPLETO, "Oficial Administrativo","Itau", Status.ATIVO, new PesquisadorDTO(p1), new ProjetoDTO(proj1), new EmpresaDTO(empr1));
+		
+		Convidado c = new Convidado(
+				2,"Joao Penca", "777777778", formataData.parse("22/07/1955"), "222222", "joaoapenca@gkmal.com",
+				"Brasileiro", "30 anos", Idade.calcularIdade(formataData.parse("22/07/1955")),EstadoCivil.SOLTEIRO,
+				'S','S',"Programador jr", 'N',"-","-", 3, 0,
+				1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1,
+				'S', 'S', Instrucao.SUPERIOR_COMPLETO, "Analista","-", Status.ATIVO, new PesquisadorDTO(p1), new ProjetoDTO(proj1), new EmpresaDTO(empr1)); 
 		
 		IdadeFilhos i1 = new IdadeFilhos(1, "3", new ConvidadoDTO(c1)); 
 		IdadeFilhos i2 = new IdadeFilhos(2, "5", new ConvidadoDTO(c1));
@@ -121,10 +128,10 @@ public class Config implements CommandLineRunner{
 		//Integer id, String logradouro,  String bairro, String numero, String cep, ConvidadoDTO convidadoDTO
 		Endereco endConv1 = new Endereco(3,"Rua Joao Cabreuva","Cidade Tiradentes", "88", "22222", new ConvidadoDTO(c1));
 		
-		proj1.getConvidados().addAll(Arrays.asList(c1));
+		proj1.getConvidados().addAll(Arrays.asList(c1,c));
 		
-		p1.getConvidados().addAll(Arrays.asList(c1)); 
-		empr1.getConvidados().addAll(Arrays.asList(c1)); 
+		p1.getConvidados().addAll(Arrays.asList(c1,c)); 
+		empr1.getConvidados().addAll(Arrays.asList(c1,c)); 
 		c1.getEnderecos().addAll(Arrays.asList(endConv1));
 		c1.getTelefones().addAll(Arrays.asList(t1, t2)); 
 		c1.getCarros().addAll(Arrays.asList(carro1)); 
@@ -142,6 +149,6 @@ public class Config implements CommandLineRunner{
 		
 		pesquisadorRepository.saveAll(Arrays.asList(p1)); 
 		
-		convidadoRepository.saveAll(Arrays.asList(c1)); 
+		convidadoRepository.saveAll(Arrays.asList(c1,c)); 
 	}
 }
