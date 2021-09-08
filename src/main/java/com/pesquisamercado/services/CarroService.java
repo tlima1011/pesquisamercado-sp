@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.pesquisamercado.domain.Carro;
-import com.pesquisamercado.domain.Empresa;
 import com.pesquisamercado.domain.dto.CarroDTO;
 import com.pesquisamercado.exception.ObjectNotFoundException;
 import com.pesquisamercado.repositories.CarroRepository;

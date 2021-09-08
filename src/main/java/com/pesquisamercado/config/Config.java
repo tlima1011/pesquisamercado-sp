@@ -25,6 +25,7 @@ import com.pesquisamercado.domain.dto.ProjetoDTO;
 import com.pesquisamercado.enums.EstadoCivil;
 import com.pesquisamercado.enums.Instrucao;
 import com.pesquisamercado.enums.Status;
+import com.pesquisamercado.repositories.CarroRepository;
 import com.pesquisamercado.repositories.ConvidadoRepository;
 import com.pesquisamercado.repositories.EmpresaRepository;
 import com.pesquisamercado.repositories.EnderecoRepository;
@@ -57,6 +58,9 @@ public class Config implements CommandLineRunner{
 	@Autowired
 	private IdadeFilhosRepository idadeFilhosRepository; 
 	
+	@Autowired 
+	private CarroRepository carroRepository; 
+	
 	@Override
 	public void run(String... args) throws Exception {
 		
@@ -79,7 +83,9 @@ public class Config implements CommandLineRunner{
 		convidadoRepository.deleteAll(); 
 		
 		idadeFilhosRepository.deleteAll(); 
-				
+	
+		carroRepository.deleteAll();  
+		
 		Empresa empr1 = new Empresa(1,"Kyra","Jonana","kyra@kyra.com", Status.ATIVO);
 				
 		Telefone telefone1 = new Telefone(1, "4441233", new EmpresaDTO (empr1));
@@ -148,6 +154,8 @@ public class Config implements CommandLineRunner{
 		empresaRepository.saveAll(Arrays.asList(empr1)); 
 		
 		pesquisadorRepository.saveAll(Arrays.asList(p1)); 
+		
+		carroRepository.saveAll(Arrays.asList(carro1)); 
 		
 		convidadoRepository.saveAll(Arrays.asList(c1,c)); 
 	}
