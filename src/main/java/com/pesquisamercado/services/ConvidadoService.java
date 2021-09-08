@@ -55,6 +55,7 @@ public class ConvidadoService {
 		newObj.setEstadoCivil(obj.getEstadoCivil()); 
 		newObj.setTemFilhos(obj.getTemFilhos()); 
 		newObj.setTrabalha(obj.getTrabalha()); 
+		newObj.setQtdeFilhos(obj.getQtdeFilhos());
 		newObj.setFaculdade(obj.getFaculdade()); 
 		newObj.setCurso(obj.getCurso());
 		newObj.setProfissao(obj.getProfissao());
@@ -112,6 +113,7 @@ public class ConvidadoService {
 				objdto.getIdade(),  
 				objdto.getEstadoCivil(), 
 				objdto.getTemFilhos(), 
+				objdto.getQtdeFilhos(), 
 				objdto.getTrabalha(), 
 				objdto.getFaculdade(),  
 				objdto.getCurso(), 

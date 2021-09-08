@@ -20,6 +20,7 @@ public class ConvidadoDTO {
 	private int idade; 
 	private EstadoCivil estadoCivil; 
 	private Character temFilhos; 
+	private Integer qtdeFilhos; 
 	private Character trabalha; 
 	private String faculdade; 
 	private String curso;
@@ -92,6 +93,7 @@ public class ConvidadoDTO {
 		this.idade = obj.getIdade(); 
 		this.estadoCivil = obj.getEstadoCivil(); 
 		this.temFilhos = obj.getTemFilhos(); 
+		this.qtdeFilhos = obj.getQtdeFilhos(); 
 		this.trabalha = obj.getTrabalha(); 
 		this.faculdade = obj.getFaculdade(); 
 		this.curso = obj.getCurso();
@@ -219,6 +221,14 @@ public class ConvidadoDTO {
 
 	public Character getTemFilhos() {
 		return temFilhos;
+	}
+
+	public Integer getQtdeFilhos() {
+		return qtdeFilhos;
+	}
+
+	public void setQtdeFilhos(Integer qtdeFilhos) {
+		this.qtdeFilhos = qtdeFilhos;
 	}
 
 	public void setTemFilhos(Character temFilhos) {

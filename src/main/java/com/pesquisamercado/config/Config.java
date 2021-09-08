@@ -108,14 +108,14 @@ public class Config implements CommandLineRunner{
 		Convidado c1 = new Convidado(
 				1,"Luis Astolfo", "777777778", formataData.parse("01/04/2001"), "9964568", "luismane@gkmail.net",
 				"Brasileiro", "15 anos", Idade.calcularIdade(formataData.parse("01/04/2001")),EstadoCivil.CASADO,
-				'S','S',"Auxiliar Administrativo", 'S',"Medicina","Uninove", 1, 1,
+				'S',2,'S',"Auxiliar Administrativo", 'S',"Medicina","Uninove", 1, 1,
 				1, 1, 2, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1,
 				'S', 'S', Instrucao.MEDIO_COMPLETO_SUPERIOR_INCOMPLETO, "Oficial Administrativo","Itau", Status.ATIVO, new PesquisadorDTO(p1), new ProjetoDTO(proj1), new EmpresaDTO(empr1));
 		
 		Convidado c = new Convidado(
 				2,"Joao Penca", "777777778", formataData.parse("22/07/1955"), "222222", "joaoapenca@gkmal.com",
 				"Brasileiro", "30 anos", Idade.calcularIdade(formataData.parse("22/07/1955")),EstadoCivil.SOLTEIRO,
-				'S','S',"Programador jr", 'N',"-","-", 3, 0,
+				'N',0,'S',"Programador jr", 'N',"-","-", 3, 0,
 				1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1,
 				'S', 'S', Instrucao.SUPERIOR_COMPLETO, "Analista","-", Status.ATIVO, new PesquisadorDTO(p1), new ProjetoDTO(proj1), new EmpresaDTO(empr1)); 
 		

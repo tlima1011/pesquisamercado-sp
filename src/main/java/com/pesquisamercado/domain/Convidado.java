@@ -31,6 +31,7 @@ public class Convidado implements Serializable{
 	private int idade; 
 	private EstadoCivil estadoCivil; 
 	private Character temFilhos; 
+	private Integer qtdeFilhos; 
 	private Character trabalha; 
 	private String faculdade; 
 	private String curso;
@@ -104,7 +105,7 @@ public class Convidado implements Serializable{
 	
 	public Convidado(Integer idConvidado, String nomeConvidado, String rg, Date dataNascimento, String cpf,
 			String email, String nacionalidade, String tempoMoradia, int idade, EstadoCivil estadoCivil,
-			Character temFilhos, Character trabalha, String profissao, Character estuda, String curso, String faculdade,
+			Character temFilhos, Integer qtdeFilhos, Character trabalha, String profissao, Character estuda, String curso, String faculdade,
 			int contBanheiro, int pontoBanheiros, int contMensalista, int contAutomovel, int contMicrocomputador,
 			int pontoMicrocomputador, int contLavaLoucas, int contGeladeira, int pontoGeladeira, int contFreezer,
 			int contLavaRoupa, int contDvd, int contMicroondas, int contMotocicleta, int contSecadoraRoupas,
@@ -121,6 +122,7 @@ public class Convidado implements Serializable{
 		this.idade = idade;
 		this.estadoCivil = estadoCivil;
 		this.temFilhos = temFilhos;
+		this.setQtdeFilhos(qtdeFilhos); 
 		this.trabalha = trabalha;
 		this.profissao = profissao;
 		this.estuda = estuda;
@@ -170,7 +172,7 @@ public class Convidado implements Serializable{
 
 	public Convidado(Integer idConvidado2, String nomeConvidado2, String rg2, Date dataNascimento2, String cpf2,
 			String email2, String nacionalidade2, String tempoMoradia2, int idade2, EstadoCivil estadoCivil2,
-			Character temFilhos2, Character trabalha2, String faculdade2, String curso2, String profissao2,
+			Character temFilhos2, Integer qtdeFilhos2,Character trabalha2, String faculdade2, String curso2, String profissao2,
 			Character estuda2, int contBanheiro2, int pontoBanheiros2, int contMensalista2, int pontoMensalista2,
 			int contAutomovel2, int pontoAutomovel2, int contMicrocomputador2, int pontoMicrocomputador2,
 			int contLavaLoucas2, int pontoLavaLoucas2, int contGeladeira2, int pontoGeladeira2, int contFreezer2,
@@ -191,6 +193,7 @@ public class Convidado implements Serializable{
 		this.idade = idade2;
 		this.estadoCivil = estadoCivil2;
 		this.temFilhos = temFilhos2;
+		this.setQtdeFilhos(qtdeFilhos2);
 		this.trabalha = trabalha2;
 		this.profissao = profissao2;
 		this.estuda = estuda2;
@@ -318,6 +321,17 @@ public class Convidado implements Serializable{
 
 	public Character getTemFilhos() {
 		return temFilhos;
+	}
+	
+	
+	
+
+	public Integer getQtdeFilhos() {
+		return qtdeFilhos;
+	}
+
+	public void setQtdeFilhos(Integer qtdeFilhos) {
+		this.qtdeFilhos = qtdeFilhos;
 	}
 
 	public void setTemFilhos(Character temFilhos) {
