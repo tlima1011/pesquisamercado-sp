@@ -7,6 +7,9 @@ import java.util.Date;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.pesquisamercado.domain.dto.EmpresaDTO;
+import com.pesquisamercado.domain.dto.PesquisadorDTO;
+import com.pesquisamercado.domain.dto.ProjetoDTO;
 import com.pesquisamercado.enums.EstadoCivil;
 import com.pesquisamercado.enums.Instrucao;
 import com.pesquisamercado.enums.Status;
@@ -89,11 +92,11 @@ public class Convidado implements Serializable{
 
 	private ArrayList<Carro> carros = new ArrayList<>();
 	
-	private Projeto projeto; 
+	private ProjetoDTO projetoDTO; 
 	
-	private Empresa empresa; 
+	private EmpresaDTO empresaDTO; 
 	
-	private Pesquisador pesquisador; 
+	private PesquisadorDTO pesquisadorDTO; 
 	
 	public Convidado() {
 		
@@ -106,7 +109,7 @@ public class Convidado implements Serializable{
 			int pontoMicrocomputador, int contLavaLoucas, int contGeladeira, int pontoGeladeira, int contFreezer,
 			int contLavaRoupa, int contDvd, int contMicroondas, int contMotocicleta, int contSecadoraRoupas,
 			Character aguaEncanada, Character ruaPavimentada, Instrucao instrucao, String profissaoChefe, String empresaChefe, Status status,
-			Projeto projeto, Empresa empresa, Pesquisador pesquisador) {
+			PesquisadorDTO pesquisadorDTO, ProjetoDTO projetoDTO, EmpresaDTO empresaDTO) {
 		this.idConvidado = idConvidado;
 		this.nomeConvidado = nomeConvidado;
 		this.rg = rg;
@@ -148,28 +151,98 @@ public class Convidado implements Serializable{
 		this.contSecadoraRoupas = contSecadoraRoupas;
 		setPontoSecadoraRoupas(contSecadoraRoupas);
 		this.aguaEncanada = aguaEncanada;
-		setPontoAguaEncanada(aguaEncanada);
+		setPontoAguaEncanada();
 		this.ruaPavimentada = ruaPavimentada;
-		setPontoRuaPavimentada(ruaPavimentada);
+		setPontoRuaPavimentada();
 		this.instrucao = instrucao;
-		setPontoInstrucao(instrucao);
+		setPontoInstrucao();
 		this.profissaoChefe = profissaoChefe;
 		this.empresaChefe = empresaChefe; 
 		setTotalPontos();
 		setCriterio();
 		this.status = status;
-		this.projeto = projeto;
-		this.empresa = empresa;
-		this.pesquisador = pesquisador;
+		this.pesquisadorDTO = pesquisadorDTO;
+		this.projetoDTO = projetoDTO;
+		this.empresaDTO = empresaDTO;
+	}
+
+	
+
+	public Convidado(Integer idConvidado2, String nomeConvidado2, String rg2, Date dataNascimento2, String cpf2,
+			String email2, String nacionalidade2, String tempoMoradia2, int idade2, EstadoCivil estadoCivil2,
+			Character temFilhos2, Character trabalha2, String faculdade2, String curso2, String profissao2,
+			Character estuda2, int contBanheiro2, int pontoBanheiros2, int contMensalista2, int pontoMensalista2,
+			int contAutomovel2, int pontoAutomovel2, int contMicrocomputador2, int pontoMicrocomputador2,
+			int contLavaLoucas2, int pontoLavaLoucas2, int contGeladeira2, int pontoGeladeira2, int contFreezer2,
+			int pontoFreezer2, int contLavaRoupa2, int pontoLavaRoupas2, int contDvd2, int pontoDvd2,
+			int contMicroondas2, int pontoMicroondas2, int contMotocicleta2, int pontoMotocicletas2,
+			int contSecadoraRoupas2, int pontoSecadoraRoupas2, Character aguaEncanada2, Integer pontoAguaEncanada2,
+			Character ruaPavimentada2, Integer pontoRuaPavimentada2, Instrucao instrucao2, Integer pontoInstrucao2,
+			String profissaoChefe2, String empresaChefe2, Integer totalPontos2, String criterio2, Status status2,
+			PesquisadorDTO pesquisadorDTO2, ProjetoDTO projetoDTO2, EmpresaDTO empresaDTO2) {
+		this.idConvidado = idConvidado2;
+		this.nomeConvidado = nomeConvidado2;
+		this.rg = rg2;
+		this.dataNascimento = dataNascimento2;
+		this.cpf = cpf2;
+		this.email = email2;
+		this.nacionalidade = nacionalidade2;
+		this.tempoMoradia = tempoMoradia2;
+		this.idade = idade2;
+		this.estadoCivil = estadoCivil2;
+		this.temFilhos = temFilhos2;
+		this.trabalha = trabalha2;
+		this.profissao = profissao2;
+		this.estuda = estuda2;
+		this.curso = curso2;
+		this.faculdade = faculdade2;
+		this.contBanheiro = contBanheiro2;
+		setPontoBanheiros(contBanheiro);
+		this.contMensalista = contMensalista2;
+		setPontoMensalista(contMensalista);
+		this.contAutomovel = contAutomovel2;
+		setPontoAutomovel(contAutomovel);
+		this.contMicrocomputador = contMicrocomputador2;
+		setPontoMicrocomputador(contMicrocomputador);
+		this.contLavaLoucas = contLavaLoucas2;
+		setPontoLavaLoucas(contLavaLoucas);
+		this.contGeladeira = contGeladeira2;
+		setPontoGeladeira(contGeladeira);
+		this.contFreezer = contFreezer2;
+		setPontoFreezer(contFreezer);
+		this.contLavaRoupa = contLavaRoupa2;
+		setPontoLavaRoupas(contLavaRoupa);
+		this.contDvd = contDvd2;
+		setPontoDvd(contDvd);
+		this.contMicroondas = contMicroondas2;
+		setPontoMicroondas(contMicroondas);
+		this.contMotocicleta = contMotocicleta2;
+		setPontoMotocicletas(contMotocicleta);
+		this.contSecadoraRoupas = contSecadoraRoupas2;
+		setPontoSecadoraRoupas(contSecadoraRoupas);
+		this.aguaEncanada = aguaEncanada2;
+		setPontoAguaEncanada();
+		this.ruaPavimentada = ruaPavimentada2;
+		setPontoRuaPavimentada();
+		this.instrucao = instrucao2;
+		setPontoInstrucao();
+		this.profissaoChefe = profissaoChefe2;
+		this.empresaChefe = empresaChefe2; 
+		setTotalPontos();
+		setCriterio();
+		this.status = status2;
+		this.pesquisadorDTO = pesquisadorDTO2;
+		this.projetoDTO = projetoDTO2;
+		this.empresaDTO = empresaDTO2;
 	}
 
 	public Integer getIdConvidado() {
 		return idConvidado;
 	}
 
-	// public void setIdConvidado(Integer idConvidado) {
-	// this.idConvidado = idConvidado;
-	// }
+	public void setIdConvidado(Integer idConvidado) {
+		this.idConvidado = idConvidado;
+	}
 
 	public String getNomeConvidado() {
 		return nomeConvidado;
@@ -495,8 +568,8 @@ public class Convidado implements Serializable{
 		return pontoAguaEncanada;
 	}
 
-	public void setPontoAguaEncanada(Character aguaEncanada) {
-		switch (aguaEncanada) {
+	public void setPontoAguaEncanada() {
+		switch (getAguaEncanada()) {
 		case 'S':
 			this.pontoAguaEncanada = 4;
 			break;
@@ -517,8 +590,8 @@ public class Convidado implements Serializable{
 		return pontoRuaPavimentada;
 	}
 
-	public void setPontoRuaPavimentada(Character ruaPavimentada) {
-		switch (ruaPavimentada) {
+	public void setPontoRuaPavimentada() {
+		switch (getRuaPavimentada()) {
 		case 'S':
 			this.pontoRuaPavimentada = 2;
 			break;
@@ -539,8 +612,8 @@ public class Convidado implements Serializable{
 		return pontoInstrucao;
 	}
 
-	public void setPontoInstrucao(Instrucao inst) {
-		switch (inst) {
+	public void setPontoInstrucao() {
+		switch (getInstrucao()) {
 		case ANALFABETO_FUNDAMENTAL_I_INCOMPLETO:
 			this.pontoInstrucao = 0;
 			break;
@@ -620,28 +693,28 @@ public class Convidado implements Serializable{
 		this.status = status;
 	}
 
-	public Projeto getProjeto() {
-		return projeto;
+	public ProjetoDTO getProjetoDTO() {
+		return projetoDTO;
 	}
 
-	public void setProjeto(Projeto projeto) {
-		this.projeto = projeto;
+	public void setProjetoDTO(ProjetoDTO projetoDTO) {
+		this.projetoDTO = projetoDTO;
 	}
 
-	public Empresa getEmpresa() {
-		return empresa;
+	public EmpresaDTO getEmpresaDTO() {
+		return empresaDTO;
 	}
 
-	public void setEmpresa(Empresa empresa) {
-		this.empresa = empresa;
+	public void setEmpresaDTO(EmpresaDTO empresaDTO) {
+		this.empresaDTO = empresaDTO;
 	}
 
-	public Pesquisador getPesquisador() {
-		return pesquisador;
+	public PesquisadorDTO getPesquisadorDTO() {
+		return pesquisadorDTO;
 	}
 
-	public void setPesquisador(Pesquisador pesquisador) {
-		this.pesquisador = pesquisador;
+	public void setPesquisadorDTO(PesquisadorDTO pesquisadorDTO) {
+		this.pesquisadorDTO = pesquisadorDTO;
 	}
 
 	public ArrayList<IdadeFilhos> getIdadesFilhos() {
@@ -659,6 +732,8 @@ public class Convidado implements Serializable{
 	public ArrayList<Carro> getCarros() {
 		return carros;
 	}
+
+	
 		
 
 }
