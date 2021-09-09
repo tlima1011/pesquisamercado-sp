@@ -25,7 +25,7 @@ public class PesquisadorService {
 
 	public Pesquisador findById(Integer idPesquisador) {
 		Optional<Pesquisador> obj = pesquisadorRepository.findById(idPesquisador);
-		return obj.orElseThrow(() -> new ObjectNotFoundException("Telefone não encontrado"));
+		return obj.orElseThrow(() -> new ObjectNotFoundException("Pesquisador não encontrado"));
 	}
 
 	public Pesquisador insert(Pesquisador obj) {

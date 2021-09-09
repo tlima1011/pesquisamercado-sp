@@ -7,9 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.pesquisamercado.domain.Convidado;
-import com.pesquisamercado.domain.Empresa;
 import com.pesquisamercado.domain.dto.ConvidadoDTO;
-import com.pesquisamercado.domain.dto.EmpresaDTO;
 import com.pesquisamercado.exception.ObjectNotFoundException;
 import com.pesquisamercado.repositories.ConvidadoRepository;
 
@@ -158,5 +156,5 @@ public class ConvidadoService {
 				objdto.getProjetoDTO(), 
 				objdto.getEmpresaDTO()
 				); 
-	}
+		}
 }

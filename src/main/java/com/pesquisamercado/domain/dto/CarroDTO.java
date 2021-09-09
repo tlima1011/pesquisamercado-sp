@@ -1,8 +1,12 @@
 package com.pesquisamercado.domain.dto;
 
+import java.io.Serializable;
+
 import com.pesquisamercado.domain.Carro;
 
-public class CarroDTO {
+public class CarroDTO implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
 	
 	private Integer id; 
 	private String modelo; 
