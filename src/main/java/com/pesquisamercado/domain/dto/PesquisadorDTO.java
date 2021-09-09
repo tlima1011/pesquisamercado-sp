@@ -1,12 +1,15 @@
 package com.pesquisamercado.domain.dto;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import com.pesquisamercado.domain.Pesquisador;
 import com.pesquisamercado.enums.EstadoCivil;
 import com.pesquisamercado.enums.Status;
 
-public class PesquisadorDTO {
+public class PesquisadorDTO implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
 	
 	private Integer idPesquisador; 
 	private String nomePesquisador; 
