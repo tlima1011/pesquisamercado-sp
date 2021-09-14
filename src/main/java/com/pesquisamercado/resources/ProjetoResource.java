@@ -14,8 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.pesquisamercado.domain.Endereco;
+import com.pesquisamercado.domain.Pesquisador;
 import com.pesquisamercado.domain.Projeto;
 import com.pesquisamercado.domain.dto.EnderecoDTO;
+import com.pesquisamercado.domain.dto.PesquisadorDTO;
 import com.pesquisamercado.domain.dto.ProjetoDTO;
 import com.pesquisamercado.services.EnderecoService;
 import com.pesquisamercado.services.ProjetoService;
@@ -33,6 +35,12 @@ public class ProjetoResource {
 			List <Projeto> list = service.findAll();
 			List<ProjetoDTO> listDto = list.stream().map(x -> new ProjetoDTO(x)).collect(Collectors.toList()); 
 			return ResponseEntity.ok().body(listDto);
+		}
+		
+		@RequestMapping(value = "/{idProjeto}", method=RequestMethod.GET)
+		public ResponseEntity<ProjetoDTO> findById(@PathVariable Integer idProjeto){
+			Projeto obj = service.findById(idProjeto); 
+			return ResponseEntity.ok().body(new ProjetoDTO(obj));
 		}
 		
 		@RequestMapping(method=RequestMethod.POST)

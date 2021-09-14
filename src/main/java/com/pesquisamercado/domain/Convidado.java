@@ -170,7 +170,7 @@ public class Convidado implements Serializable{
 
 	
 
-	public Convidado(Integer idConvidado2, String nomeConvidado2, String rg2, Date dataNascimento2, String cpf2,
+	public Convidado(Integer idConvidado, String nomeConvidado2, String rg2, Date dataNascimento2, String cpf2,
 			String email2, String nacionalidade2, String tempoMoradia2, int idade2, EstadoCivil estadoCivil2,
 			Character temFilhos2, Integer qtdeFilhos2,Character trabalha2, String faculdade2, String curso2, String profissao2,
 			Character estuda2, int contBanheiro2, int pontoBanheiros2, int contMensalista2, int pontoMensalista2,
@@ -182,7 +182,7 @@ public class Convidado implements Serializable{
 			Character ruaPavimentada2, Integer pontoRuaPavimentada2, Instrucao instrucao2, Integer pontoInstrucao2,
 			String profissaoChefe2, String empresaChefe2, Integer totalPontos2, String criterio2, Status status2,
 			PesquisadorDTO pesquisador, ProjetoDTO projeto, EmpresaDTO empresa) {
-		this.idConvidado = idConvidado2;
+		this.idConvidado = idConvidado;
 		this.nomeConvidado = nomeConvidado2;
 		this.rg = rg2;
 		this.dataNascimento = dataNascimento2;

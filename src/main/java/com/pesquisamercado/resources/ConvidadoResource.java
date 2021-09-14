@@ -32,12 +32,6 @@ public class ConvidadoResource {
 		return ResponseEntity.ok().body(listDto);
 	}
 	
-//	@RequestMapping(value = "/{id}", method=RequestMethod.GET)
-//	public ResponseEntity<UserDTO> findById(@PathVariable String id){
-//		User obj = service.findById(id); 
-//		return ResponseEntity.ok().body(new UserDTO(obj));
-//	}
-	
 	@RequestMapping(value="/{idConvidado}", method=RequestMethod.GET)
 	public ResponseEntity<ConvidadoDTO> findById(@PathVariable Integer idConvidado){
 		Convidado obj = service.findById(idConvidado); 
