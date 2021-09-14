@@ -76,9 +76,9 @@ public class ConvidadoDTO implements Serializable{
 	private Integer totalPontos;
 	private String criterio;
 	private Status status;
-	private PesquisadorDTO pesquisadorDTO; 
-	private ProjetoDTO projetoDTO; 
-	private EmpresaDTO empresaDTO; 
+	private PesquisadorDTO pesquisador; 
+	private ProjetoDTO projeto; 
+	private EmpresaDTO empresa; 
 		
 	public ConvidadoDTO() {
 		
@@ -137,9 +137,9 @@ public class ConvidadoDTO implements Serializable{
 		this.totalPontos = obj.getTotalPontos();
 		this.criterio = obj.getCriterio();
 		this.status = obj.getStatus();
-		this.pesquisadorDTO = obj.getPesquisadorDTO();
-		this.projetoDTO = obj.getProjetoDTO();
-		this.empresaDTO = obj.getEmpresaDTO(); 
+		this.pesquisador = obj.getPesquisadorDTO();
+		this.projeto = obj.getProjetoDTO();
+		this.empresa = obj.getEmpresaDTO(); 
 	}
 
 	public Integer getIdConvidado() {
@@ -558,16 +558,16 @@ public class ConvidadoDTO implements Serializable{
 		this.status = status;
 	}
 
-	public PesquisadorDTO getPesquisadorDTO() {
-		return pesquisadorDTO;
+	public PesquisadorDTO getPesquisador() {
+		return pesquisador;
 	}
 
-	public ProjetoDTO getProjetoDTO() {
-		return projetoDTO;
+	public ProjetoDTO getProjeto() {
+		return projeto;
 	}
 
-	public EmpresaDTO getEmpresaDTO() {
-		return empresaDTO;
+	public EmpresaDTO getEmpresa() {
+		return empresa;
 	}
 	
 }

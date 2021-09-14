@@ -14,25 +14,25 @@ public class EnderecoDTO implements Serializable{
 	private String bairro; 
 	private String cep; 
 		
-	private EmpresaDTO empresaDTO; 
+	private EmpresaDTO empresa; 
 	
-	private PesquisadorDTO pesquisadorDTO;
+	private PesquisadorDTO pesquisador;
 	
-	private ConvidadoDTO convidadoDTO; 
+	private ConvidadoDTO convidado; 
 	
 	public EnderecoDTO() { 
 		
 	}
-
+	
 	public EnderecoDTO(Endereco obj) {
 		this.id = obj.getId();
 		this.logradouro = obj.getLogradouro(); 
 		this.numero = obj.getNumero();
 		this.bairro = obj.getBairro();
 		this.cep = obj.getCep();
-		this.empresaDTO = obj.getEmpresaDTO(); 
-		this.pesquisadorDTO = obj.getPesquisadorDTO(); 
-		this.convidadoDTO = obj.getConvidadoDTO(); 
+		this.empresa = obj.getEmpresaDTO(); 
+		this.pesquisador = obj.getPesquisadorDTO(); 
+		this.convidado = obj.getConvidadoDTO(); 
 	}
 
 	public Integer getId() {
@@ -76,31 +76,26 @@ public class EnderecoDTO implements Serializable{
 	}
 
 	public EmpresaDTO getEmpresaDTO() {
-		return empresaDTO;
+		return empresa;
 	}
 
-	public void setEmpresaDTO(EmpresaDTO empresaDTO) {
-		this.empresaDTO = empresaDTO;
+	public void setEmpresaDTO(EmpresaDTO empresa) {
+		this.empresa = empresa;
 	}
 
 	public PesquisadorDTO getPesquisadorDTO() {
-		return pesquisadorDTO;
+		return pesquisador;
 	}
 
-	public void setPesquisadorDTO(PesquisadorDTO pesquisadorDTO) {
-		this.pesquisadorDTO = pesquisadorDTO;
+	public void setPesquisadorDTO(PesquisadorDTO pesquisador) {
+		this.pesquisador = pesquisador;
 	}
 
 	public ConvidadoDTO getConvidadoDTO() {
-		return convidadoDTO;
+		return convidado;
 	}
 
-	public void setConvidadoDTO(ConvidadoDTO convidadoDTO) {
-		this.convidadoDTO = convidadoDTO;
+	public void setConvidadoDTO(ConvidadoDTO convidado) {
+		this.convidado = convidado;
 	}
-	
-	
-	
-	
-	
 }

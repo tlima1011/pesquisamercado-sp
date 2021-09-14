@@ -18,18 +18,18 @@ public class Carro implements Serializable{
 	private String marca; 
 	private Integer ano; 
 	
-	private ConvidadoDTO convidadoDTO; 
+	private ConvidadoDTO convidado; 
 	
 	public Carro() { 
 		
 	}
 
-	public Carro(Integer id, String modelo, String marca, Integer ano, ConvidadoDTO convidadoDTO) {
+	public Carro(Integer id, String modelo, String marca, Integer ano, ConvidadoDTO convidado) {
 		this.id = id;
 		this.modelo = modelo;
 		this.marca = marca;
 		this.ano = ano;
-		this.convidadoDTO = convidadoDTO;
+		this.convidado = convidado;
 	}
 
 	public Integer getId() {
@@ -64,12 +64,11 @@ public class Carro implements Serializable{
 		this.ano = ano;
 	}
 
-	public ConvidadoDTO getConvidadoDTO() {
-		return convidadoDTO;
+	public ConvidadoDTO getConvidado() {
+		return convidado;
 	}
 
-	public void setConvidadoDTO(ConvidadoDTO convidadoDTO) {
-		this.convidadoDTO = convidadoDTO;
+	public void setConvidadoDTO(ConvidadoDTO convidado) {
+		this.convidado = convidado;
 	}
-	
 }

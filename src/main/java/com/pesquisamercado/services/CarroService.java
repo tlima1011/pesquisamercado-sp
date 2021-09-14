@@ -45,7 +45,7 @@ public class CarroService {
 		newObj.setModelo(obj.getModelo()); 
 		newObj.setMarca(obj.getMarca()); 
 		newObj.setAno(obj.getAno());
-		newObj.setConvidadoDTO(obj.getConvidadoDTO());
+		newObj.setConvidadoDTO(obj.getConvidado());
 	}
 	
 	public Carro fromDTO(CarroDTO objdto) {

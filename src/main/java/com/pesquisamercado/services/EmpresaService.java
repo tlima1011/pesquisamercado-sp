@@ -55,7 +55,7 @@ public class EmpresaService {
 				objdto.getNomeContato(),
 				objdto.getEmail(),
 				objdto.getStatus()
-				); 
+		); 
 	}
 	
 	/*this.logradouro = logradouro;

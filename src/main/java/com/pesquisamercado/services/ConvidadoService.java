@@ -152,9 +152,9 @@ public class ConvidadoService {
 				objdto.getTotalPontos(),
 				objdto.getCriterio(),
 				objdto.getStatus(),
-				objdto.getPesquisadorDTO(), 
-				objdto.getProjetoDTO(), 
-				objdto.getEmpresaDTO()
+				objdto.getPesquisador(), 
+				objdto.getProjeto(), 
+				objdto.getEmpresa()
 				); 
 		}
 }

@@ -24,7 +24,7 @@ public class CarroDTO implements Serializable{
 		this.modelo = obj.getModelo(); 
 		this.marca = obj.getMarca(); 
 		this.ano = obj.getAno();
-		this.convidadoDTO = obj.getConvidadoDTO(); 
+		this.convidadoDTO = obj.getConvidado(); 
 	}
 
 	public Integer getId() {
@@ -62,7 +62,4 @@ public class CarroDTO implements Serializable{
 	public ConvidadoDTO getConvidadoDTO() {
 		return convidadoDTO;
 	}
-
-	
-
 }

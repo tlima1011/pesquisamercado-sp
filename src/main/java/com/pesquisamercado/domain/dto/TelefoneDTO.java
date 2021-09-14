@@ -2,6 +2,8 @@ package com.pesquisamercado.domain.dto;
 
 import java.io.Serializable;
 
+import org.springframework.data.mongodb.core.mapping.DBRef;
+
 import com.pesquisamercado.domain.Pesquisador;
 import com.pesquisamercado.domain.Telefone;
 
@@ -12,6 +14,7 @@ public class TelefoneDTO implements Serializable{
 	private Integer id; 
 	private String numero; 
 	
+	@DBRef(lazy = true)
 	private ConvidadoDTO convidadoDTO; 
 	
 	private EmpresaDTO empresaDTO; 

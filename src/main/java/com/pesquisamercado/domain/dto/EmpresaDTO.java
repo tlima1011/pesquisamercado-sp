@@ -66,8 +66,5 @@ public class EmpresaDTO implements Serializable{
 	public void setStatus(Status status) {
 		this.status = status;
 	}
-	
-	
-	
-	
+
 }

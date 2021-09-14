@@ -21,42 +21,42 @@ public class Endereco implements Serializable{
 	private String bairro; 
 	private String cep; 
 	
-	private EmpresaDTO empresaDTO;
+	private EmpresaDTO empresa;
 	
-	private PesquisadorDTO pesquisadorDTO; 
+	private PesquisadorDTO pesquisador; 
 		
-	private ConvidadoDTO convidadoDTO; 
+	private ConvidadoDTO convidado; 
 	
 	public Endereco(Integer integer, String string, String string2, String string3, String string4, EmpresaDTO empresaDTO2, ConvidadoDTO convidadoDTO2, PesquisadorDTO pesquisadorDTO2) { 
 		
 	}
 	
-	public Endereco(Integer id, String logradouro,  String bairro, String numero, String cep, ConvidadoDTO convidadoDTO) {
+	public Endereco(Integer id, String logradouro,  String bairro, String numero, String cep, ConvidadoDTO convidado) {
 		this.id = id;
 		this.logradouro = logradouro;
 		this.bairro = bairro;
 		this.numero = numero;
 		this.cep = cep;
-		this.convidadoDTO = convidadoDTO; 
+		this.convidado = convidado; 
 	} 
 	
 	
-	public Endereco(Integer id, String logradouro,  String bairro, String numero, String cep, PesquisadorDTO pesquisadorDTO) {
+	public Endereco(Integer id, String logradouro,  String bairro, String numero, String cep, PesquisadorDTO pesquisador) {
 		this.id = id;
 		this.logradouro = logradouro;
 		this.bairro = bairro;
 		this.numero = numero;
 		this.cep = cep;
-		this.setPesquisadorDTO(pesquisadorDTO); 
+		this.pesquisador = pesquisador; 
 	} 
 	
-	public Endereco(Integer id, String logradouro,  String bairro, String numero, String cep, EmpresaDTO empresaDTO) {
+	public Endereco(Integer id, String logradouro,  String bairro, String numero, String cep, EmpresaDTO empresa) {
 		this.id = id;
 		this.logradouro = logradouro;
 		this.bairro = bairro;
 		this.numero = numero;
 		this.cep = cep;
-		this.empresaDTO = empresaDTO; 
+		this.empresa = empresa; 
 	}
 
 	public Integer getId() {
@@ -100,30 +100,26 @@ public class Endereco implements Serializable{
 	}
 
 	public EmpresaDTO getEmpresaDTO() {
-		return empresaDTO;
+		return empresa;
 	}
 
-	public void setEmpresaDTO(EmpresaDTO empresaDTO) {
-		this.empresaDTO = empresaDTO;
+	public void setEmpresaDTO(EmpresaDTO empresa) {
+		this.empresa = empresa;
 	}
 
 	public PesquisadorDTO getPesquisadorDTO() {
-		return pesquisadorDTO;
+		return pesquisador;
 	}
 
-	public void setPesquisadorDTO(PesquisadorDTO pesquisadorDTO) {
-		this.pesquisadorDTO = pesquisadorDTO;
+	public void setPesquisadorDTO(PesquisadorDTO pesquisador) {
+		this.pesquisador = pesquisador;
 	}
 
 	public ConvidadoDTO getConvidadoDTO() {
-		return convidadoDTO;
+		return convidado;
 	}
 
-	public void setConvidadoDTO(ConvidadoDTO convidadoDTO) {
-		this.convidadoDTO = convidadoDTO;
+	public void setConvidadoDTO(ConvidadoDTO convidado) {
+		this.convidado = convidado;
 	}
-	
-	
-	
-	
 }

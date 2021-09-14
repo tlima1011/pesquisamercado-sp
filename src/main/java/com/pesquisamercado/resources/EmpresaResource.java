@@ -38,17 +38,17 @@ public class EmpresaResource {
 	public ResponseEntity<Void> insert(@RequestBody EmpresaDTO objDto){
 		Empresa obj = service.fromDTO(objDto); 
 		obj = service.insert(obj);
-		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getIdEmpresa()).toUri(); 
+		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{idEmpresa}").buildAndExpand(obj.getIdEmpresa()).toUri(); 
 		return ResponseEntity.created(uri).build();
 	}
 	
-	@RequestMapping(value = "/{id}", method=RequestMethod.DELETE)
+	@RequestMapping(value = "/{idEmpresa}", method=RequestMethod.DELETE)
 	public ResponseEntity<Void> delete(@PathVariable Integer idEmpresa){
 		service.delete(idEmpresa); 
 		return ResponseEntity.noContent().build();
 	}
 	
-	@RequestMapping(value = "/{id}", method=RequestMethod.PUT)
+	@RequestMapping(value = "/{idEmpresa}", method=RequestMethod.PUT)
 	public ResponseEntity<Void> update(@RequestBody EmpresaDTO objDto, @PathVariable Integer idEmpresa){
 		Empresa obj = service.fromDTO(objDto); 
 		obj.setIdEmpresa(idEmpresa);

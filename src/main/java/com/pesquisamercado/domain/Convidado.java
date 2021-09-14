@@ -93,11 +93,11 @@ public class Convidado implements Serializable{
 
 	private ArrayList<Carro> carros = new ArrayList<>();
 	
-	private ProjetoDTO projetoDTO; 
+	private ProjetoDTO projeto; 
 	
-	private EmpresaDTO empresaDTO; 
+	private EmpresaDTO empresa; 
 	
-	private PesquisadorDTO pesquisadorDTO; 
+	private PesquisadorDTO pesquisador; 
 	
 	public Convidado() {
 		
@@ -110,7 +110,7 @@ public class Convidado implements Serializable{
 			int pontoMicrocomputador, int contLavaLoucas, int contGeladeira, int pontoGeladeira, int contFreezer,
 			int contLavaRoupa, int contDvd, int contMicroondas, int contMotocicleta, int contSecadoraRoupas,
 			Character aguaEncanada, Character ruaPavimentada, Instrucao instrucao, String profissaoChefe, String empresaChefe, Status status,
-			PesquisadorDTO pesquisadorDTO, ProjetoDTO projetoDTO, EmpresaDTO empresaDTO) {
+			PesquisadorDTO pesquisador, ProjetoDTO projeto, EmpresaDTO empresa) {
 		this.idConvidado = idConvidado;
 		this.nomeConvidado = nomeConvidado;
 		this.rg = rg;
@@ -163,9 +163,9 @@ public class Convidado implements Serializable{
 		setTotalPontos();
 		setCriterio();
 		this.status = status;
-		this.pesquisadorDTO = pesquisadorDTO;
-		this.projetoDTO = projetoDTO;
-		this.empresaDTO = empresaDTO;
+		this.pesquisador = pesquisador;
+		this.projeto = projeto;
+		this.empresa = empresa;
 	}
 
 	
@@ -181,7 +181,7 @@ public class Convidado implements Serializable{
 			int contSecadoraRoupas2, int pontoSecadoraRoupas2, Character aguaEncanada2, Integer pontoAguaEncanada2,
 			Character ruaPavimentada2, Integer pontoRuaPavimentada2, Instrucao instrucao2, Integer pontoInstrucao2,
 			String profissaoChefe2, String empresaChefe2, Integer totalPontos2, String criterio2, Status status2,
-			PesquisadorDTO pesquisadorDTO2, ProjetoDTO projetoDTO2, EmpresaDTO empresaDTO2) {
+			PesquisadorDTO pesquisador, ProjetoDTO projeto, EmpresaDTO empresa) {
 		this.idConvidado = idConvidado2;
 		this.nomeConvidado = nomeConvidado2;
 		this.rg = rg2;
@@ -234,9 +234,9 @@ public class Convidado implements Serializable{
 		setTotalPontos();
 		setCriterio();
 		this.status = status2;
-		this.pesquisadorDTO = pesquisadorDTO2;
-		this.projetoDTO = projetoDTO2;
-		this.empresaDTO = empresaDTO2;
+		this.pesquisador = pesquisador;
+		this.projeto = projeto;
+		this.empresa = empresa;
 	}
 
 	public Integer getIdConvidado() {
@@ -708,27 +708,27 @@ public class Convidado implements Serializable{
 	}
 
 	public ProjetoDTO getProjetoDTO() {
-		return projetoDTO;
+		return projeto;
 	}
 
-	public void setProjetoDTO(ProjetoDTO projetoDTO) {
-		this.projetoDTO = projetoDTO;
+	public void setProjetoDTO(ProjetoDTO projeto) {
+		this.projeto = projeto;
 	}
 
 	public EmpresaDTO getEmpresaDTO() {
-		return empresaDTO;
+		return empresa;
 	}
 
-	public void setEmpresaDTO(EmpresaDTO empresaDTO) {
-		this.empresaDTO = empresaDTO;
+	public void setEmpresaDTO(EmpresaDTO empresa) {
+		this.empresa = empresa;
 	}
 
 	public PesquisadorDTO getPesquisadorDTO() {
-		return pesquisadorDTO;
+		return pesquisador;
 	}
 
-	public void setPesquisadorDTO(PesquisadorDTO pesquisadorDTO) {
-		this.pesquisadorDTO = pesquisadorDTO;
+	public void setPesquisadorDTO(PesquisadorDTO pesquisador) {
+		this.pesquisador = pesquisador;
 	}
 
 	public ArrayList<IdadeFilhos> getIdadesFilhos() {
@@ -746,10 +746,4 @@ public class Convidado implements Serializable{
 	public ArrayList<Carro> getCarros() {
 		return carros;
 	}
-	
-	
-
-	
-		
-
 }
