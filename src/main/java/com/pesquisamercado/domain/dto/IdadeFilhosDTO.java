@@ -11,7 +11,7 @@ public class IdadeFilhosDTO implements Serializable{
 	private Integer id; 
 	private String idade; 
 	
-	private ConvidadoDTO convidadoDTO; 
+	private ConvidadoDTO convidado; 
 	
 	public IdadeFilhosDTO() {
 		
@@ -20,7 +20,7 @@ public class IdadeFilhosDTO implements Serializable{
 	public IdadeFilhosDTO(IdadeFilhos obj) {
 		this.id = obj.getId(); 
 		this.idade = obj.getIdade(); 
-		this.convidadoDTO = obj.getConvidadoDTO();
+		this.convidado = obj.getConvidadoDTO();
 	}
 
 	public Integer getId() {
@@ -40,7 +40,6 @@ public class IdadeFilhosDTO implements Serializable{
 	}
 
 	public ConvidadoDTO getConvidadoDTO() {
-		return convidadoDTO;
+		return convidado;
 	}
-	
 }

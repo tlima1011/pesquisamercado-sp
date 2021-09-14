@@ -13,7 +13,7 @@ public class CarroDTO implements Serializable{
 	private String marca; 
 	private Integer ano;
 	
-	private ConvidadoDTO convidadoDTO; 
+	private ConvidadoDTO convidado; 
 	
 	public CarroDTO() {
 		
@@ -24,7 +24,7 @@ public class CarroDTO implements Serializable{
 		this.modelo = obj.getModelo(); 
 		this.marca = obj.getMarca(); 
 		this.ano = obj.getAno();
-		this.convidadoDTO = obj.getConvidado(); 
+		this.convidado = obj.getConvidado(); 
 	}
 
 	public Integer getId() {
@@ -60,6 +60,6 @@ public class CarroDTO implements Serializable{
 	}
 
 	public ConvidadoDTO getConvidadoDTO() {
-		return convidadoDTO;
+		return convidado;
 	}
 }

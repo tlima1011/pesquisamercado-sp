@@ -7,16 +7,16 @@ public class IdadeFilhos {
 	private Integer id; 
 	private String idade; 
 	
-	private ConvidadoDTO convidadoDTO;
+	private ConvidadoDTO convidado;
 	
 	public IdadeFilhos() { 
 		
 	}
 	
-	public IdadeFilhos(Integer id, String idade, ConvidadoDTO convidadoDTO) {
+	public IdadeFilhos(Integer id, String idade, ConvidadoDTO convidado) {
 		this.id = id;
 		this.idade = idade;
-		this.convidadoDTO = convidadoDTO; 
+		this.convidado = convidado; 
 	}
 
 	public Integer getId() {
@@ -35,17 +35,12 @@ public class IdadeFilhos {
 		this.idade = idade;
 	}
 
-	public void setConvidadoDTO(ConvidadoDTO convidadoDTO) {
-		this.convidadoDTO = convidadoDTO; 
+	public void setConvidadoDTO(ConvidadoDTO convidado) {
+		this.convidado = convidado; 
 		
 	}
 	
 	public ConvidadoDTO getConvidadoDTO() {
-		return convidadoDTO;
+		return convidado;
 	}
-
-	
-	
-		
-
 }

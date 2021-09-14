@@ -22,29 +22,29 @@ public class Telefone implements Serializable{
 		
 	}
 	
-	private ConvidadoDTO convidadoDTO; 
+	private ConvidadoDTO convidado; 
 	
-	private PesquisadorDTO pesquisadorDTO; 	
+	private PesquisadorDTO pesquisador; 	
 	
-	private EmpresaDTO empresaDTO;
+	private EmpresaDTO empresa;
 	
-	public Telefone(Integer id, String numero, ConvidadoDTO convidadoDTO) {
+	public Telefone(Integer id, String numero, ConvidadoDTO convidado) {
 		this.id = id;  
 		this.numero = numero;
-		this.convidadoDTO = convidadoDTO;  
+		this.convidado = convidado;  
 	}
 	
 	
-	public Telefone(Integer id, String numero, PesquisadorDTO pesquisadorDTO) {
+	public Telefone(Integer id, String numero, PesquisadorDTO pesquisador) {
 		this.id = id;  
 		this.numero = numero;
-		this.pesquisadorDTO = pesquisadorDTO; 
+		this.pesquisador = pesquisador; 
 	}
 		
-	public Telefone(Integer id, String numero, EmpresaDTO empresaDTO) {
+	public Telefone(Integer id, String numero, EmpresaDTO empresa) {
 		this.id = id;  
 		this.numero = numero;
-		this.empresaDTO = empresaDTO; 
+		this.empresa = empresa; 
 	}
 	
 	public Integer getId() {
@@ -64,26 +64,26 @@ public class Telefone implements Serializable{
 	}
 
 	public EmpresaDTO getEmpresaDTO() {
-		return empresaDTO;
+		return empresa;
 	}
 
-	public void setEmpresaDTO(EmpresaDTO empresaDTO) {
-		this.empresaDTO = empresaDTO;
+	public void setEmpresaDTO(EmpresaDTO empresa) {
+		this.empresa = empresa;
 	}
 
 	public PesquisadorDTO getPesquisadorDTO() {
-		return pesquisadorDTO;
+		return pesquisador;
 	}
 
-	public void setPesquisadorDTO(PesquisadorDTO pesquisadorDTO) {
-		this.pesquisadorDTO = pesquisadorDTO;
+	public void setPesquisadorDTO(PesquisadorDTO pesquisador) {
+		this.pesquisador = pesquisador;
 	}
 
 	public ConvidadoDTO getConvidadoDTO() {
-		return convidadoDTO;
+		return convidado;
 	}
 
-	public void setConvidadoDTO(ConvidadoDTO convidadoDTO) {
-		this.convidadoDTO = convidadoDTO;
+	public void setConvidadoDTO(ConvidadoDTO convidado) {
+		this.convidado = convidado;
 	}
 }

@@ -24,9 +24,9 @@ public class Projeto implements Serializable{
 	private Double beneficio; 
 	private Date dataHoraEntrevista; 
 	
-	private EmpresaDTO empresaDTO;
+	private EmpresaDTO empresa;
 	
-	private PesquisadorDTO pesquisadorDTO; 
+	private PesquisadorDTO pesquisador; 
 	
 	private ArrayList<Convidado> convidados = new ArrayList<>(); 
 	
@@ -35,7 +35,7 @@ public class Projeto implements Serializable{
 	}
 
 	public Projeto(Integer idProjeto, String numProjeto, String descProjeto, Date dataRecrutamento, Double valorPagar, Double beneficio,
-			Date dataHoraEntrevista, EmpresaDTO empresaDTO, PesquisadorDTO pesquisadorDTO) {
+			Date dataHoraEntrevista, EmpresaDTO empresa, PesquisadorDTO pesquisador) {
 		this.idProjeto = idProjeto;
 		this.numProjeto = numProjeto;
 		this.descProjeto = descProjeto; 
@@ -43,8 +43,8 @@ public class Projeto implements Serializable{
 		this.valorPagar = valorPagar;
 		this.beneficio = beneficio;
 		this.dataHoraEntrevista = dataHoraEntrevista;
-		this.empresaDTO = empresaDTO;
-		this.pesquisadorDTO = pesquisadorDTO; 
+		this.empresa = empresa;
+		this.pesquisador = pesquisador; 
 	}
 
 	public Integer getIdProjeto() {
@@ -104,28 +104,22 @@ public class Projeto implements Serializable{
 	}
 
 	public EmpresaDTO getEmpresaDTO() {
-		return empresaDTO;
+		return empresa;
 	}
 
-	public void setEmpresaDTO(EmpresaDTO empresaDTO) {
-		this.empresaDTO = empresaDTO;
+	public void setEmpresaDTO(EmpresaDTO empresa) {
+		this.empresa = empresa;
 	}
 
 	public PesquisadorDTO getPesquisadorDTO() {
-		return pesquisadorDTO;
+		return pesquisador;
 	}
 
-	public void setPesquisadorDTO(PesquisadorDTO pesquisadorDTO) {
-		this.pesquisadorDTO = pesquisadorDTO;
+	public void setPesquisadorDTO(PesquisadorDTO pesquisador) {
+		this.pesquisador = pesquisador;
 	}
 
 	public ArrayList<Convidado> getConvidados() {
 		return convidados;
 	}
-
-	
-	
-	
-	
-	
 }
