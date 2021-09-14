@@ -30,13 +30,13 @@ public class EmpresaService {
 		return empresaRepository.insert(obj); 
 	}
 	
-	public void delete(Integer idEmpresa) {
-		findById(idEmpresa);
-		empresaRepository.deleteById(idEmpresa);
+	public void delete(Integer id) {
+		findById(id);
+		empresaRepository.deleteById(id);
 	}
 	
 	public Empresa update(Empresa obj) {
-		Empresa newObj = findById(obj.getIdEmpresa());
+		Empresa newObj = findById(obj.getId());
 		updateData(newObj, obj);
 		return empresaRepository.save(newObj);
 	}
@@ -50,17 +50,11 @@ public class EmpresaService {
 	
 	public Empresa fromDTO(EmpresaDTO objdto) {
 		return new Empresa(
-				objdto.getIdEmpresa(),
+				objdto.getId(),
 				objdto.getNomeEmpresa(),
 				objdto.getNomeContato(),
 				objdto.getEmail(),
 				objdto.getStatus()
 		); 
 	}
-	
-	/*this.logradouro = logradouro;
-	this.numero = numero;
-	this.bairro = bairro;
-	this.cep = cep;*/
-
 }

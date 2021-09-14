@@ -9,7 +9,7 @@ public class EmpresaDTO implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
-	private Integer idEmpresa; 
+	private Integer id; 
 	private String nomeEmpresa; 
 	private String nomeContato; 
 	private String email;
@@ -20,19 +20,19 @@ public class EmpresaDTO implements Serializable{
 	}
 
 	public EmpresaDTO(Empresa obj) {
-		this.idEmpresa = obj.getIdEmpresa();
+		this.id = obj.getId();
 		this.nomeEmpresa = obj.getNomeEmpresa();
 		this.nomeContato = obj.getNomeContato(); 
 		this.email = obj.getEmail(); 
 		this.status = obj.getStatus(); 
 	}
 
-	public Integer getIdEmpresa() {
-		return idEmpresa;
+	public Integer getId() {
+		return id;
 	}
 
-	public void setIdEmpresa(Integer idEmpresa) {
-		this.idEmpresa = idEmpresa;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getNomeEmpresa() {

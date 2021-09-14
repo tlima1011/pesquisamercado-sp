@@ -14,7 +14,7 @@ public class Empresa implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	private Integer idEmpresa; 
+	private Integer id; 
 	private String nomeEmpresa; 
 	private String nomeContato; 
 	private String email;
@@ -34,20 +34,20 @@ public class Empresa implements Serializable{
 		
 	}
 
-	public Empresa(Integer idEmpresa, String nomeEmpresa, String nomeContato, String email, Status status) {
-		this.idEmpresa = idEmpresa;
+	public Empresa(Integer id, String nomeEmpresa, String nomeContato, String email, Status status) {
+		this.id = id;
 		this.nomeEmpresa = nomeEmpresa;
 		this.nomeContato = nomeContato;
 		this.email = email;
 		this.status = status;
 	}
 
-	public Integer getIdEmpresa() {
-		return idEmpresa;
+	public Integer getId() {
+		return id;
 	}
 
-	public void setIdEmpresa(Integer idEmpresa) {
-		this.idEmpresa = idEmpresa;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getNomeEmpresa() {
@@ -97,6 +97,4 @@ public class Empresa implements Serializable{
 	public ArrayList<Convidado> getConvidados() {
 		return convidados;
 	}
-	
-	
 }

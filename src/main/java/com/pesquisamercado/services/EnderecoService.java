@@ -64,7 +64,7 @@ public class EnderecoService {
 				objdto.getEmpresaDTO(), 
 				objdto.getConvidadoDTO(), 
 				objdto.getPesquisadorDTO()
-				); 
+			); 
 	}
 	
 	/*this.logradouro = logradouro;

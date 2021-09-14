@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.pesquisamercado.domain.Carro;
 import com.pesquisamercado.domain.Convidado;
 import com.pesquisamercado.domain.dto.ConvidadoDTO;
 import com.pesquisamercado.services.ConvidadoService;
@@ -26,12 +27,17 @@ public class ConvidadoResource {
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public ResponseEntity<List<ConvidadoDTO>> findAll(){
-		
 		List <Convidado> list = service.findAll();
 		List<ConvidadoDTO> listDto = list.stream().map(x -> new ConvidadoDTO(x)).collect(Collectors.toList()); 
 		return ResponseEntity.ok().body(listDto);
 	}
 	
+	@RequestMapping(value = "/{idConvidado}", method=RequestMethod.GET)
+	public ResponseEntity<Convidado> findById(@PathVariable Integer idConvidado){
+		Convidado obj = service.findById(idConvidado); 
+		return ResponseEntity.ok().body(obj);
+	}
+		
 	@RequestMapping(method=RequestMethod.POST)
 	public ResponseEntity<Void> insert(@RequestBody ConvidadoDTO objDto){
 		Convidado obj = service.fromDTO(objDto); 
