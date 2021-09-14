@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.pesquisamercado.domain.Projeto;
 import com.pesquisamercado.domain.Telefone;
+import com.pesquisamercado.domain.dto.ProjetoDTO;
 import com.pesquisamercado.domain.dto.TelefoneDTO;
 import com.pesquisamercado.services.TelefoneService;
 
@@ -30,6 +32,12 @@ public class TelefoneResource {
 		List <Telefone> list = service.findAll();
 		List<TelefoneDTO> listDto = list.stream().map(x -> new TelefoneDTO(x)).collect(Collectors.toList()); 
 		return ResponseEntity.ok().body(listDto);
+	}
+	
+	@RequestMapping(value = "/{id}", method=RequestMethod.GET)
+	public ResponseEntity<TelefoneDTO> findById(@PathVariable Integer id){
+		Telefone obj = service.findById(id); 
+		return ResponseEntity.ok().body(new TelefoneDTO(obj));
 	}
 	
 	@RequestMapping(method=RequestMethod.POST)
