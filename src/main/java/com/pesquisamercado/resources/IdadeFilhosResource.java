@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.pesquisamercado.domain.Endereco;
 import com.pesquisamercado.domain.IdadeFilhos;
+import com.pesquisamercado.domain.dto.EnderecoDTO;
 import com.pesquisamercado.domain.dto.IdadeFilhosDTO;
 import com.pesquisamercado.services.IdadeFilhosService;
 
@@ -30,6 +32,12 @@ public class IdadeFilhosResource {
 		List <IdadeFilhos> list = service.findAll();
 		List<IdadeFilhosDTO> listDto = list.stream().map(x -> new IdadeFilhosDTO(x)).collect(Collectors.toList()); 
 		return ResponseEntity.ok().body(listDto);
+	}
+	
+	@RequestMapping(value = "/{id}", method=RequestMethod.GET)
+	public ResponseEntity<IdadeFilhosDTO> findById(@PathVariable Integer id){
+		IdadeFilhos obj = service.findById(id); 
+		return ResponseEntity.ok().body(new IdadeFilhosDTO(obj));
 	}
 	
 	@RequestMapping(method=RequestMethod.POST)
