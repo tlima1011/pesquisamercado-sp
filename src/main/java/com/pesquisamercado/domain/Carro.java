@@ -7,6 +7,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.pesquisamercado.domain.dto.ConvidadoDTO;
 
+/**
+ * 
+ * @author Thiago
+ * @version vs1.0 
+ */
 @Document(collection="carro")
 public class Carro implements Serializable{
 	
