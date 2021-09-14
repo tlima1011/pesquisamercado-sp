@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.pesquisamercado.domain.IdadeFilhos;
 import com.pesquisamercado.domain.Pesquisador;
+import com.pesquisamercado.domain.dto.IdadeFilhosDTO;
 import com.pesquisamercado.domain.dto.PesquisadorDTO;
 import com.pesquisamercado.services.PesquisadorService;
 
@@ -30,6 +32,12 @@ public class PesquisadorResource {
 		List <Pesquisador> list = service.findAll();
 		List<PesquisadorDTO> listDto = list.stream().map(x -> new PesquisadorDTO(x)).collect(Collectors.toList()); 
 		return ResponseEntity.ok().body(listDto);
+	}
+	
+	@RequestMapping(value = "/{idPesquisador}", method=RequestMethod.GET)
+	public ResponseEntity<PesquisadorDTO> findById(@PathVariable Integer idPesquisador){
+		Pesquisador obj = service.findById(idPesquisador); 
+		return ResponseEntity.ok().body(new PesquisadorDTO(obj));
 	}
 	
 	@RequestMapping(method=RequestMethod.POST)
