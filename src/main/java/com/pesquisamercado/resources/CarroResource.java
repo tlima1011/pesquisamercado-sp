@@ -26,10 +26,15 @@ public class CarroResource {
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public ResponseEntity<List<CarroDTO>> findAll(){
-		
 		List <Carro> list = service.findAll();
 		List<CarroDTO> listDto = list.stream().map(x -> new CarroDTO(x)).collect(Collectors.toList()); 
 		return ResponseEntity.ok().body(listDto);
+	}
+	
+	@RequestMapping(value = "/{id}", method=RequestMethod.GET)
+	public ResponseEntity<Carro> findById(@PathVariable Integer id){
+		Carro obj = service.findById(id); 
+		return ResponseEntity.ok().body(obj);
 	}
 	
 	@RequestMapping(method=RequestMethod.POST)
