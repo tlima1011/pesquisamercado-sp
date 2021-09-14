@@ -35,6 +35,12 @@ public class EnderecoResource {
 		return ResponseEntity.ok().body(listDto);
 	}
 	
+	@RequestMapping(value = "/{id}", method=RequestMethod.GET)
+	public ResponseEntity<EnderecoDTO> findById(@PathVariable Integer id){
+		Endereco obj = service.findById(id); 
+		return ResponseEntity.ok().body(new EnderecoDTO(obj));
+	}
+	
 	@RequestMapping(method=RequestMethod.POST)
 	public ResponseEntity<Void> insert(@RequestBody EnderecoDTO objDto){
 		Endereco obj = service.fromDTO(objDto); 

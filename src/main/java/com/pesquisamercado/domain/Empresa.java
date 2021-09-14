@@ -22,7 +22,6 @@ public class Empresa implements Serializable{
 	
 	//@DBRef(lazy = true)
 	private ArrayList<Telefone> telefones = new ArrayList<>(); 
-	
 	//@DBRef(lazy = true)
 	private ArrayList<Endereco> enderecos = new ArrayList<>();
 	

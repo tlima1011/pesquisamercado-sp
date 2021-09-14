@@ -28,15 +28,7 @@ public class EmpresaResource {
 	
 	@Autowired
 	private EmpresaService service; 
-	
-	
-//	@RequestMapping(method=RequestMethod.GET)
-//	public ResponseEntity<List<CarroDTO>> findAll(){
-//		List <Carro> list = service.findAll();
-//		List<CarroDTO> listDto = list.stream().map(x -> new CarroDTO(x)).collect(Collectors.toList()); 
-//		return ResponseEntity.ok().body(listDto);
-//	}
-	
+
 	@RequestMapping(method=RequestMethod.GET)
 	public ResponseEntity<List<EmpresaDTO>> findAll(){
 		List <Empresa> list = service.findAll();

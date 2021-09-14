@@ -29,7 +29,7 @@ public class Carro implements Serializable{
 		this.modelo = modelo;
 		this.marca = marca;
 		this.ano = ano;
-		this.convidado = convidado;
+		this.convidado = convidado; 
 	}
 
 	public Integer getId() {

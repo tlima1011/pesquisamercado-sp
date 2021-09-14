@@ -27,7 +27,7 @@ public class Endereco implements Serializable{
 		
 	private ConvidadoDTO convidado; 
 	
-	public Endereco(Integer integer, String string, String string2, String string3, String string4, EmpresaDTO empresaDTO2, ConvidadoDTO convidadoDTO2, PesquisadorDTO pesquisadorDTO2) { 
+	public Endereco() { 
 		
 	}
 	
@@ -57,6 +57,18 @@ public class Endereco implements Serializable{
 		this.numero = numero;
 		this.cep = cep;
 		this.empresa = empresa; 
+	}
+
+	public Endereco(Integer id2, String logradouro2, String numero2, String bairro2, String cep2, EmpresaDTO empresa,
+			ConvidadoDTO convidado, PesquisadorDTO pesquisador) {
+		this.id = id;
+		this.logradouro = logradouro;
+		this.bairro = bairro;
+		this.numero = numero;
+		this.cep = cep;
+		this.empresa = empresa;
+		this.convidado = convidado;
+		this.pesquisador = pesquisador; 
 	}
 
 	public Integer getId() {

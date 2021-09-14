@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
 import com.pesquisamercado.domain.Carro;
 import com.pesquisamercado.domain.Convidado;
 import com.pesquisamercado.domain.dto.ConvidadoDTO;
 import com.pesquisamercado.services.ConvidadoService;
+
 
 @RestController
 @RequestMapping(value="/convidados")
@@ -32,10 +32,16 @@ public class ConvidadoResource {
 		return ResponseEntity.ok().body(listDto);
 	}
 	
-	@RequestMapping(value = "/{idConvidado}", method=RequestMethod.GET)
-	public ResponseEntity<Convidado> findById(@PathVariable Integer idConvidado){
+//	@RequestMapping(value = "/{id}", method=RequestMethod.GET)
+//	public ResponseEntity<UserDTO> findById(@PathVariable String id){
+//		User obj = service.findById(id); 
+//		return ResponseEntity.ok().body(new UserDTO(obj));
+//	}
+	
+	@RequestMapping(value="/{idConvidado}", method=RequestMethod.GET)
+	public ResponseEntity<ConvidadoDTO> findById(@PathVariable Integer idConvidado){
 		Convidado obj = service.findById(idConvidado); 
-		return ResponseEntity.ok().body(obj);
+		return ResponseEntity.ok().body(new ConvidadoDTO(obj));
 	}
 		
 	@RequestMapping(method=RequestMethod.POST)
