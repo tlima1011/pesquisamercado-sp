@@ -1,6 +1,7 @@
 package com.pesquisamercado.domain.dto;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 
 import com.pesquisamercado.domain.Pesquisador;
@@ -13,7 +14,7 @@ public class PesquisadorDTO implements Serializable{
 	
 	private Integer idPesquisador; 
 	private String nomePesquisador; 
-	private Date dataNascimento; 
+	private LocalDate dataNascimento; 
 	private int idade; 
 	private EstadoCivil estadoCivil; 
 	private String cpf; 
@@ -55,11 +56,11 @@ public class PesquisadorDTO implements Serializable{
 		this.nomePesquisador = nomePesquisador;
 	}
 
-	public Date getDataNascimento() {
+	public LocalDate getDataNascimento() {
 		return dataNascimento;
 	}
 
-	public void setDataNascimento(Date dataNascimento) {
+	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 

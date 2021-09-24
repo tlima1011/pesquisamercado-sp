@@ -1,6 +1,7 @@
 package com.pesquisamercado.domain;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -23,7 +24,7 @@ public class Convidado implements Serializable{
 	private Integer idConvidado; 
 	private String nomeConvidado; 
 	private String rg; 
-	private Date dataNascimento; 
+	private LocalDate dataNascimento; 
 	private String cpf; 
 	private String email; 
 	private String nacionalidade; 
@@ -103,7 +104,7 @@ public class Convidado implements Serializable{
 		
 	}
 	
-	public Convidado(Integer idConvidado, String nomeConvidado, String rg, Date dataNascimento, String cpf,
+	public Convidado(Integer idConvidado, String nomeConvidado, String rg, LocalDate dataNascimento, String cpf,
 			String email, String nacionalidade, String tempoMoradia, int idade, EstadoCivil estadoCivil,
 			Character temFilhos, Integer qtdeFilhos, Character trabalha, String profissao, Character estuda, String curso, String faculdade,
 			int contBanheiro, int pontoBanheiros, int contMensalista, int contAutomovel, int contMicrocomputador,
@@ -168,9 +169,7 @@ public class Convidado implements Serializable{
 		this.empresa = empresa;
 	}
 
-	
-
-	public Convidado(Integer idConvidado, String nomeConvidado2, String rg2, Date dataNascimento2, String cpf2,
+	public Convidado(Integer idConvidado, String nomeConvidado2, String rg2, LocalDate dataNascimento2, String cpf2,
 			String email2, String nacionalidade2, String tempoMoradia2, int idade2, EstadoCivil estadoCivil2,
 			Character temFilhos2, Integer qtdeFilhos2,Character trabalha2, String faculdade2, String curso2, String profissao2,
 			Character estuda2, int contBanheiro2, int pontoBanheiros2, int contMensalista2, int pontoMensalista2,
@@ -263,11 +262,11 @@ public class Convidado implements Serializable{
 		this.rg = rg;
 	}
 
-	public Date getDataNascimento() {
+	public LocalDate getDataNascimento() {
 		return dataNascimento;
 	}
 
-	public void setDataNascimento(Date dataNascimento) {
+	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 
@@ -323,9 +322,6 @@ public class Convidado implements Serializable{
 		return temFilhos;
 	}
 	
-	
-	
-
 	public Integer getQtdeFilhos() {
 		return qtdeFilhos;
 	}

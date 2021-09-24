@@ -1,6 +1,7 @@
 package com.pesquisamercado.domain;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -18,7 +19,7 @@ public class Pesquisador implements Serializable{
 	@Id
 	private Integer idPesquisador; 
 	private String nomePesquisador; 
-	private Date dataNascimento; 
+	private LocalDate dataNascimento; 
 	private int idade; 
 	private EstadoCivil estadoCivil; 
 	private String cpf; 
@@ -41,7 +42,7 @@ public class Pesquisador implements Serializable{
 		
 	}
 
-	public Pesquisador(Integer idPesquisador, String nomePesquisador, Date dataNascimento, int idade,
+	public Pesquisador(Integer idPesquisador, String nomePesquisador, LocalDate dataNascimento, int idade,
 			EstadoCivil estadoCivil, String cpf, String rg, String email, String senha, Status status) {
 		this.idPesquisador = idPesquisador;
 		this.nomePesquisador = nomePesquisador;
@@ -71,11 +72,11 @@ public class Pesquisador implements Serializable{
 		this.nomePesquisador = nomePesquisador;
 	}
 
-	public Date getDataNascimento() {
+	public LocalDate getDataNascimento() {
 		return dataNascimento;
 	}
 
-	public void setDataNascimento(Date dataNascimento) {
+	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 

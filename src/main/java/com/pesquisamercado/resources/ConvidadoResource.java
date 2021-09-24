@@ -37,6 +37,13 @@ public class ConvidadoResource {
 		Convidado obj = service.findById(idConvidado); 
 		return ResponseEntity.ok().body(new ConvidadoDTO(obj));
 	}
+	
+//	@RequestMapping(value="/{criterio}",method=RequestMethod.GET)
+//	public ResponseEntity<ConvidadoDTO> findByCriterio(@PathVariable String criterio){
+//		Convidado obj = service.findByCriterio(criterio); 
+//		return ResponseEntity.ok().body(new ConvidadoDTO(obj)); 
+//	}
+	
 		
 	@RequestMapping(method=RequestMethod.POST)
 	public ResponseEntity<Void> insert(@RequestBody ConvidadoDTO objDto){

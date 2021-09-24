@@ -26,6 +26,11 @@ public class ConvidadoService {
 		return obj.orElseThrow(() -> new ObjectNotFoundException("Convidado não encontrado"));
 	}
 	
+//	public Convidado findByCriterio(String criterio) {
+//		Optional<Convidado> obj = convidadoRepository.exists(criterio); 
+//		return obj.orElseThrow(() -> new ObjectNotFoundException("Convidado não encontrado"));
+//	}
+	
 	public Convidado insert(Convidado obj) {
 		return convidadoRepository.insert(obj); 
 	}

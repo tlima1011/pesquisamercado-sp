@@ -1,6 +1,8 @@
 package com.pesquisamercado.config;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.Locale;
 import java.util.TimeZone;
@@ -66,6 +68,7 @@ public class Config implements CommandLineRunner{
 		
 		Locale.setDefault(Locale.US);
 		SimpleDateFormat formataData = new SimpleDateFormat("dd/MM/yyyy"); 
+		DateTimeFormatter formatadorData = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		formataData.setTimeZone(TimeZone.getTimeZone("GMT"));
 		SimpleDateFormat formataDataHora = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 		formataDataHora.setTimeZone(TimeZone.getTimeZone("GMT")); 
@@ -93,7 +96,9 @@ public class Config implements CommandLineRunner{
 		
 		Endereco endEmpresa1 = new Endereco(1, "Rua Gomes de Carvalho","Vila Olimpia","88","774769", new EmpresaDTO (empr1));
 		
-		Pesquisador p1 = new Pesquisador(1,"Joel", formataData.parse("22/05/1982"), Idade.calcularIdade(formataData.parse("22/05/1982")), EstadoCivil.SOLTEIRO, "2223354", "2222","contato2pesquisa@gmeil.com", "senha", Status.ATIVO);
+		LocalDate nascimento = LocalDate.parse("1982-05-22"); 
+		
+		Pesquisador p1 = new Pesquisador(1,"Joel", LocalDate.parse("1982-05-22"), Idade.calcularIdade(LocalDate.parse("22/05/1982", formatadorData)), EstadoCivil.SOLTEIRO, "2223354", "2222","contato2pesquisa@gmeil.com", "senha", Status.ATIVO);
 		
 		Projeto proj1 = new Projeto(1, "999987/03", "BomBOM Bom +QD+", formataData.parse("12/02/2021"), 120.00, 60.00,  formataDataHora.parse("15/02/2021 13:00"), new EmpresaDTO (empr1), new PesquisadorDTO(p1));
 		
@@ -111,16 +116,20 @@ public class Config implements CommandLineRunner{
 		p1.getProjetos().addAll(Arrays.asList(proj1));
 		p1.getEmpresas().addAll(Arrays.asList(empr1)); 
 		
+		LocalDate nasc = LocalDate.parse("2001-04-01");
+		
 		Convidado c1 = new Convidado(
-				1,"Luis Astolfo", "777777778", formataData.parse("01/04/2001"), "9964568", "luismane@gkmail.net",
-				"Brasileiro", "15 anos", Idade.calcularIdade(formataData.parse("01/04/2001")),EstadoCivil.CASADO,
+				1,"Luis Astolfo", "777777778", nasc, "9964568", "luismane@gkmail.net",
+				"Brasileiro", "15 anos", Idade.calcularIdade(nasc),EstadoCivil.CASADO,
 				'S',2,'S',"Auxiliar Administrativo", 'S',"Medicina","Uninove", 1, 1,
 				1, 1, 2, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1,
 				'S', 'S', Instrucao.MEDIO_COMPLETO_SUPERIOR_INCOMPLETO, "Oficial Administrativo","Itau", Status.ATIVO, new PesquisadorDTO(p1), new ProjetoDTO(proj1), new EmpresaDTO(empr1));
 		
+		LocalDate nasc1 = LocalDate.parse("1955-07-22");
+		
 		Convidado c = new Convidado(
-				2,"Joao Penca", "777777778", formataData.parse("22/07/1955"), "222222", "joaoapenca@gkmal.com",
-				"Brasileiro", "30 anos", Idade.calcularIdade(formataData.parse("22/07/1955")),EstadoCivil.SOLTEIRO,
+				2,"Joao Penca", "777777778", nasc1, "222222", "joaoapenca@gkmal.com",
+				"Brasileiro", "30 anos", Idade.calcularIdade(nasc1),EstadoCivil.SOLTEIRO,
 				'N',0,'S',"Programador jr", 'N',"-","-", 3, 0,
 				1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1,
 				'S', 'S', Instrucao.SUPERIOR_COMPLETO, "Analista","-", Status.ATIVO, new PesquisadorDTO(p1), new ProjetoDTO(proj1), new EmpresaDTO(empr1)); 
